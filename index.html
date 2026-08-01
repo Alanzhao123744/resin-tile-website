@@ -58,31 +58,18 @@
         </div>
       </a>
 
-      <!-- Catalogs Nav -->
+      <!-- Horizontal Catalogs Nav -->
       <nav class="header__nav" id="nav">
         <ul class="header__nav-list">
-          <!-- Catalog Dropdown -->
-          <li class="nav-dropdown">
-            <button class="nav-dropdown__trigger" data-i18n="nav_catalog">📦 Catalogs ▾</button>
-            <div class="nav-dropdown__panel">
-              <div class="nav-dropdown__col">
-                <h4 data-i18n="cat_asa_title">ASA Resin Tile Series</h4>
-                <a href="#asa" data-i18n="cat_asa_spanish">Spanish Style Resin Tile</a>
-                <a href="#asa-specs" data-i18n="cat_asa_specs">Specifications & Colors</a>
-                <a href="#contact" data-i18n="cat_asa_custom">Custom OEM Orders</a>
-              </div>
-              <div class="nav-dropdown__col">
-                <h4 data-i18n="cat_pvc_title">PVC Sheet Series</h4>
-                <a href="#pvc" data-i18n="cat_pvc_corrugated">Corrugated Roofing Sheet</a>
-                <a href="#pvc-specs" data-i18n="cat_pvc_specs">Specifications & Colors</a>
-                <a href="#contact" data-i18n="cat_pvc_custom">Custom OEM Orders</a>
-              </div>
-            </div>
-          </li>
-          <li><a href="#why" data-i18n="nav_why">Why Us</a></li>
-          <li><a href="#factory" data-i18n="nav_factory">Factory</a></li>
-          <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
-          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+          <li><a href="#home" class="header__nav-cat" data-i18n="nav_home">Home</a></li>
+          <li class="nav-sep">|</li>
+          <li><a href="#asa" class="header__nav-cat header__nav-cat--active" data-i18n="nav_asa_cat">ASA Resin Tile</a></li>
+          <li><a href="#pvc" class="header__nav-cat" data-i18n="nav_pvc_cat">PVC Corrugated Sheet</a></li>
+          <li class="nav-sep">|</li>
+          <li><a href="#why" class="header__nav-link" data-i18n="nav_why">Why Us</a></li>
+          <li><a href="#factory" class="header__nav-link" data-i18n="nav_factory">Factory</a></li>
+          <li><a href="#faq" class="header__nav-link" data-i18n="nav_faq">FAQ</a></li>
+          <li><a href="#contact" class="header__nav-link" data-i18n="nav_contact">Contact</a></li>
         </ul>
       </nav>
 
@@ -167,7 +154,7 @@
 
           <div class="product-detail__specs-grid" id="asa-specs">
             <div class="spec-item"><span class="spec-item__label" data-i18n="spec_width">Width</span><span class="spec-item__val">1050mm (Eff. 960mm)</span></div>
-            <div class="spec-item"><span class="spec-item__label" data-i18n="spec_thick">Thickness</span><span class="spec-item__val">2.5mm / 3.0mm</span></div>
+            <div class="spec-item"><span class="spec-item__label" data-i18n="spec_thick">Thickness</span><span class="spec-item__val">2.0mm - 3.0mm</span></div>
             <div class="spec-item"><span class="spec-item__label" data-i18n="spec_length2">Length</span><span class="spec-item__val">Custom (Max 11.8m)</span></div>
             <div class="spec-item"><span class="spec-item__label" data-i18n="spec_life">Lifespan</span><span class="spec-item__val">30+ Years</span></div>
             <div class="spec-item"><span class="spec-item__label" data-i18n="spec_fire">Fire Rating</span><span class="spec-item__val">B1 (Self-extinguishing)</span></div>
@@ -359,10 +346,10 @@
         <p class="section__subtitle" data-i18n="factory_subtitle">20 automated production lines in Guangdong — visit us anytime</p>
       </div>
       <div class="factory__grid">
-        <div class="factory__card"><img src="https://www.gdgaoyi.com/wp-content/uploads/2026/03/AAA-1024x682.jpg" alt="Factory" loading="lazy"><span data-i18n="fac1">ASA Tile Co-extrusion Lines</span></div>
-        <div class="factory__card"><img src="https://www.gdgaoyi.com/wp-content/uploads/2025/12/车间9.jpg" alt="Workshop" loading="lazy"><span data-i18n="fac2">Production Workshop</span></div>
-        <div class="factory__card"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=500&h=340&fit=crop" alt="Warehouse" loading="lazy"><span data-i18n="fac3">Finished Product Warehouse</span></div>
-        <div class="factory__card"><img src="https://images.unsplash.com/photo-1577416412292-1d301d0e8ed8?w=500&h=340&fit=crop" alt="Shipping" loading="lazy"><span data-i18n="fac4">Container Loading & Export</span></div>
+        <div class="factory__card"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=340&fit=crop" alt="Production Line" loading="lazy"><span data-i18n="fac1">ASA Tile Co-extrusion Lines</span></div>
+        <div class="factory__card"><img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=500&h=340&fit=crop" alt="QC Testing" loading="lazy"><span data-i18n="fac2">Production Workshop</span></div>
+        <div class="factory__card"><img src="https://images.unsplash.com/photo-1591955506262-3b4771b0de39?w=500&h=340&fit=crop" alt="Resin Tile Stack" loading="lazy"><span data-i18n="fac3">Resin Tile Manufacturing</span></div>
+        <div class="factory__card"><img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=500&h=340&fit=crop" alt="Roof Installation" loading="lazy"><span data-i18n="fac4">Roof Installation View</span></div>
       </div>
     </div>
   </section>

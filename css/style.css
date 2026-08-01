@@ -95,17 +95,11 @@ body{top:0!important}
 .header__nav-list{display:flex;gap:2px;align-items:center}
 .header__nav-link{padding:10px 14px;border-radius:var(--rad);font-size:.9rem;font-weight:500;color:var(--txt);transition:all var(--tr)}
 .header__nav-link:hover{background:var(--bg-alt);color:var(--pri)}
-
-/* Catalogs Dropdown */
-.nav-dropdown{position:relative}
-.nav-dropdown__trigger{padding:10px 16px;border-radius:var(--rad);font-size:.9rem;font-weight:600;color:var(--wht);background:var(--pri);transition:all var(--tr);display:flex;align-items:center;gap:4px;cursor:pointer}
-.nav-dropdown__trigger:hover{background:var(--pri-light)}
-.nav-dropdown__panel{position:absolute;top:calc(100% + 8px);left:0;background:var(--wht);min-width:360px;border-radius:var(--rad-lg);box-shadow:var(--sh-lg);padding:8px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:all .2s ease;display:flex;gap:4px;z-index:1001}
-.nav-dropdown:hover .nav-dropdown__panel{opacity:1;visibility:visible;transform:translateY(0)}
-.nav-dropdown__col{flex:1;padding:16px}
-.nav-dropdown__col h4{font-size:.75rem;text-transform:uppercase;letter-spacing:1px;color:var(--txt-light);margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--acc)}
-.nav-dropdown__col a{display:block;padding:8px 10px;border-radius:var(--rad);font-size:.88rem;font-weight:500;color:var(--txt);transition:all var(--tr);margin-bottom:2px}
-.nav-dropdown__col a:hover{background:var(--bg-alt);color:var(--acc);padding-left:14px}
+/* Catalog tabs */
+.header__nav-cat{padding:10px 18px;border-radius:var(--rad);font-size:.9rem;font-weight:700;color:var(--pri);transition:all var(--tr);background:var(--bg-alt)}
+.header__nav-cat:hover{background:var(--acc);color:var(--wht)}
+.header__nav-cat--active{background:var(--acc);color:var(--wht)}
+.nav-sep{color:var(--bdr);font-weight:300;margin:0 4px;font-size:1rem;user-select:none}
 
 .header__cta-btn{background:var(--acc);color:var(--wht);padding:10px 20px;border-radius:var(--rad);font-size:.9rem;font-weight:700;transition:all var(--tr);white-space:nowrap}
 .header__cta-btn:hover{background:var(--acc-dark)}

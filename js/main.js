@@ -6,10 +6,8 @@
 const i18n = {
   zh: {
     logo_tag: '屋面瓦制造商',
-    nav_catalog: '📦 产品目录 ▾', nav_home: '首页', nav_asa: 'ASA树脂瓦', nav_pvc: 'PVC波浪瓦', nav_why: '为什么选我们',
+    nav_home: '首页', nav_asa_cat: 'ASA树脂瓦', nav_pvc_cat: 'PVC波浪瓦', nav_why: '为什么选我们',
     nav_factory: '工厂实拍', nav_faq: '常见问题', nav_contact: '联系我们', get_quote: '立即询价',
-    cat_asa_title: 'ASA树脂瓦系列', cat_asa_spanish: 'ASA合成树脂瓦', cat_asa_specs: '规格参数 & 颜色', cat_asa_custom: '定制 OEM 订单',
-    cat_pvc_title: 'PVC波浪瓦系列', cat_pvc_corrugated: 'PVC波浪瓦/梯形瓦', cat_pvc_specs: '规格参数 & 颜色', cat_pvc_custom: '定制 OEM 订单',
 
     hero_badge: 'Since 2016 · 20条生产线 · 中国佛山',
     hero_title: 'ASA合成树脂瓦 & PVC波浪瓦屋面材料',
@@ -20,8 +18,8 @@ const i18n = {
 
     about_heading: 'Dingshengan — 您值得信赖的佛山屋面瓦制造商',
     about_p1: '<strong>Dingshengan（鼎晟安建材）</strong>成立于2016年，是一家专业生产ASA合成树脂瓦和PVC波浪瓦的制造商。公司位于<strong>广东省佛山市</strong>——中国建材行业的中心地带，集研发、生产和全球销售于一体。',
-    about_p2: '现代化工厂配备8条全自动共挤生产线和自有质检实验室。年产能超过5,000万㎡，产品远销东南亚、中东、非洲、南美等30多个国家和地区。',
-    about_li1: '8条全自动共挤生产线', about_li2: '自有实验室 & 配色中心',
+    about_p2: '现代化工厂配备20条全自动共挤生产线和自有质检实验室。年产能超过5,000万㎡，产品远销东南亚、中东、非洲、南美等30多个国家和地区。',
+    about_li1: '20条全自动共挤生产线', about_li2: '自有实验室 & 配色中心',
     about_li3: '自有配色实验室 & 质检中心', about_li4: 'OEM/ODM — 定制颜色、尺寸、厚度、包装',
     about_btn: '合作洽谈 ▸', about_badge_year: '始于',
 
@@ -30,7 +28,7 @@ const i18n = {
     prod1_name: 'ASA合成树脂瓦', prod1_tag: '畅销产品',
     prod1_desc: '三层共挤技术：ASA耐候表层 + 抗冲击PVC芯层 + 增强底层。经典建筑瓦型，219mm节距，融合现代建筑美学与尖端材料科学。',
     spec_width: '宽度', spec_thick: '厚度', spec_length2: '长度', spec_life: '使用寿命',
-    spec_fire: '防火等级', spec_warranty2: '质保', spec_colors: '可选颜色：',
+    spec_fire: '防火等级', spec_warranty2: '质保', spec_thick_range: '厚度范围', spec_colors: '可选颜色：',
     prod_inquiry: '询价 ASA 树脂瓦 ▸',
 
     prod2_overline: '经济系列', prod2_title: 'UPVC波浪瓦/梯形瓦',
@@ -54,7 +52,7 @@ const i18n = {
     app3: '度假村&寺庙', app4: '工业厂房', app5: '农业&农村', app6: '车棚&雨棚',
 
     factory_title: '佛山工厂实拍', factory_subtitle: '广东现代化生产基地 — 随时欢迎实地参观考察',
-    fac1: 'ASA树脂瓦共挤生产线', fac2: '生产制造车间', fac3: '成品仓库', fac4: '集装箱装货发运',
+    fac1: 'ASA树脂瓦共挤生产线', fac2: '生产制造车间', fac3: '树脂瓦产品制造', fac4: '屋面安装实景',
 
     cases_title: '全球工程案例', cases_subtitle: '产品远销30+国家，品质受全球客户信赖',
     case1_title: '马尼拉住宅小区', case1_desc: '500套住宅，80,000㎡ ASA树脂瓦',
@@ -67,10 +65,10 @@ const i18n = {
     cert3_desc: '欧盟CE产品认证', cert4_desc: '第三方质量检测',
 
     faq_title: '常见问题',
-    faq1_q: '最小起订量是多少？', faq1_a: '标准颜色/规格：500㎡。定制颜色/规格：1000㎡。样品订单无起订量限制，0.5㎡内免费。',
+    faq1_q: '最小起订量是多少？', faq1_a: '标准颜色/规格：5000㎡。定制颜色/规格：10000㎡。样品订单无起订量限制，0.5㎡内免费。',
     faq2_q: '交货周期多久？', faq2_a: '标准订单收到定金后15-20天发货。定制订单25-30天。佛山工厂FCL整柜装货。',
     faq3_q: '提供OEM/ODM代工吗？', faq3_a: '是的。全面OEM/ODM服务：定制配色、定制尺寸、品牌包装、私人标签。',
-    faq4_q: '接受哪些付款方式？', faq4_a: 'T/T电汇（30%定金，70%发货前）、即期信用证、西联汇款。样品支持PayPal。',
+    faq4_q: '接受哪些付款方式？', faq4_a: 'WorldFirst（万里汇）、T/T电汇（30%定金，70%发货前）、即期信用证。样品支持PayPal。',
     faq5_q: '出口包装如何保障？', faq5_a: '珍珠棉隔层→免熏蒸木托盘→缠绕膜密封→外层木箱。运输破损率低于0.1%。',
     faq6_q: '可以参观工厂吗？', faq6_a: '当然！我们位于广东佛山，距广州白云机场约1小时车程。联系我们安排接送。',
 
@@ -93,10 +91,8 @@ const i18n = {
 
   en: {
     logo_tag: 'Roofing Manufacturer',
-    nav_catalog: '📦 Catalogs ▾', nav_home: 'Home', nav_asa: 'ASA Tile', nav_pvc: 'PVC Sheet', nav_why: 'Why Us',
+    nav_home: 'Home', nav_asa_cat: 'ASA Resin Tile', nav_pvc_cat: 'PVC Sheet', nav_why: 'Why Us',
     nav_factory: 'Factory', nav_faq: 'FAQ', nav_contact: 'Contact', get_quote: 'Get Quote',
-    cat_asa_title: 'ASA Tile Series', cat_asa_spanish: 'ASA Synthetic Resin Tile', cat_asa_specs: 'Specs & Colors', cat_asa_custom: 'Custom OEM Orders',
-    cat_pvc_title: 'PVC Sheet Series', cat_pvc_corrugated: 'PVC Corrugated Sheet', cat_pvc_specs: 'Specs & Colors', cat_pvc_custom: 'Custom OEM Orders',
 
     hero_badge: 'Since 2016 · 20 Production Lines · Foshan China',
     hero_title: 'ASA Synthetic Resin Tile & PVC Corrugated Roofing Sheet',
@@ -107,8 +103,8 @@ const i18n = {
 
     about_heading: 'Dingshengan — Your Trusted Roofing Manufacturer in Foshan',
     about_p1: 'Founded in 2016, <strong>Dingshengan</strong> is a professional manufacturer of ASA synthetic resin roof tiles and PVC corrugated sheets. Located in <strong>Foshan, Guangdong</strong> — the heart of China\'s building materials industry — we integrate R&D, production, and global sales.',
-    about_p2: 'Our modern factory is equipped with 8 automated co-extrusion lines and an in-house QC lab. With 50M+ ㎡ annual output, we serve distributors, contractors, and wholesalers across Southeast Asia, the Middle East, Africa, South America, and beyond.',
-    about_li1: '8 automated co-extrusion lines', about_li2: 'In-house color lab & QC center',
+    about_p2: 'Our modern factory is equipped with 20 automated co-extrusion lines and an in-house QC lab. With 50M+ ㎡ annual output, we serve distributors, contractors, and wholesalers across Southeast Asia, the Middle East, Africa, South America, and beyond.',
+    about_li1: '20 automated co-extrusion lines', about_li2: 'In-house color lab & QC center',
     about_li3: 'In-house color lab & QC center', about_li4: 'OEM/ODM — custom color, size, packaging',
     about_btn: 'Partner With Us ▸', about_badge_year: 'Since',
 
@@ -145,7 +141,7 @@ const i18n = {
     factory_title: 'Inside Our Foshan Factory',
     factory_subtitle: 'Modern production facility in Guangdong — welcome to visit anytime',
     fac1: 'ASA Tile Co-extrusion Lines', fac2: 'Production Workshop',
-    fac3: 'Finished Goods Warehouse', fac4: 'Container Loading & Export',
+    fac3: 'Resin Tile Manufacturing', fac4: 'Roof Installation View',
 
     cases_title: 'Global Project Cases', cases_subtitle: 'Trusted by contractors & distributors across 30+ countries',
     case1_title: 'Manila Residential Complex', case1_desc: '80,000㎡ ASA tiles for 500-unit development',
@@ -158,10 +154,10 @@ const i18n = {
     cert3_desc: 'European Conformity', cert4_desc: 'Third-party Quality Verified',
 
     faq_title: 'Frequently Asked Questions',
-    faq1_q: 'What is the MOQ?', faq1_a: 'Standard colors: 500㎡. Custom: 1000㎡. Free samples within 0.5㎡ — no MOQ for samples.',
+    faq1_q: 'What is the MOQ?', faq1_a: 'Standard colors: 5000㎡. Custom: 10000㎡. Free samples within 0.5㎡ — no MOQ for samples.',
     faq2_q: 'How long is delivery?', faq2_a: 'Standard: 15-20 days after deposit. Custom: 25-30 days. FCL loading at our Foshan factory.',
     faq3_q: 'Do you offer OEM/ODM?', faq3_a: 'Yes. Full OEM/ODM: custom colors, dimensions, branded packaging, and private labeling.',
-    faq4_q: 'Payment terms?', faq4_a: 'T/T (30% deposit, 70% before shipment), L/C at sight, Western Union. Sample: PayPal or full T/T.',
+    faq4_q: 'Payment terms?', faq4_a: 'WorldFirst, T/T (30% deposit, 70% before shipment), L/C at sight. Sample: PayPal or full T/T.',
     faq5_q: 'How are tiles packaged?', faq5_a: 'PE foam between tiles → fumigated pallets → stretch wrap → wooden crate. Damage rate below 0.1%.',
     faq6_q: 'Can I visit the factory?', faq6_a: 'Absolutely! We\'re in Foshan, Guangdong — 1 hour from Guangzhou Airport. Contact us for pickup.',
 
