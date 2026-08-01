@@ -8,8 +8,8 @@ const i18n = {
     logo_tag: '屋面瓦制造商',
     nav_catalog: '📦 产品目录 ▾', nav_home: '首页', nav_asa: 'ASA树脂瓦', nav_pvc: 'PVC波浪瓦', nav_why: '为什么选我们',
     nav_factory: '工厂实拍', nav_faq: '常见问题', nav_contact: '联系我们', get_quote: '立即询价',
-    cat_asa_title: 'ASA树脂瓦系列', cat_asa_spanish: '西班牙式树脂瓦', cat_asa_specs: '规格参数 & 颜色', cat_asa_custom: '定制 OEM 订单',
-    cat_pvc_title: 'PVC波浪瓦系列', cat_pvc_corrugated: '波浪瓦/梯形瓦', cat_pvc_specs: '规格参数 & 颜色', cat_pvc_custom: '定制 OEM 订单',
+    cat_asa_title: 'ASA树脂瓦系列', cat_asa_spanish: 'ASA合成树脂瓦', cat_asa_specs: '规格参数 & 颜色', cat_asa_custom: '定制 OEM 订单',
+    cat_pvc_title: 'PVC波浪瓦系列', cat_pvc_corrugated: 'PVC波浪瓦/梯形瓦', cat_pvc_specs: '规格参数 & 颜色', cat_pvc_custom: '定制 OEM 订单',
 
     hero_badge: 'Since 2016 · 20条生产线 · 中国佛山',
     hero_title: 'ASA合成树脂瓦 & PVC波浪瓦屋面材料',
@@ -19,16 +19,16 @@ const i18n = {
     stat1: '条自动化生产线', stat2: '㎡ 年产量', stat3: '成立年份', stat4: '全球客户',
 
     about_heading: 'Dingshengan — 您值得信赖的佛山屋面瓦制造商',
-    about_p1: '<strong>Dingshengan（鼎盛安建材）</strong>成立于2016年，是一家专业生产ASA合成树脂瓦和PVC波浪瓦的制造商。公司位于<strong>广东省佛山市</strong>——中国建材行业的中心地带，集研发、生产和全球销售于一体。',
+    about_p1: '<strong>Dingshengan（鼎晟安建材）</strong>成立于2016年，是一家专业生产ASA合成树脂瓦和PVC波浪瓦的制造商。公司位于<strong>广东省佛山市</strong>——中国建材行业的中心地带，集研发、生产和全球销售于一体。',
     about_p2: '现代化工厂配备8条全自动共挤生产线和自有质检实验室。年产能超过5,000万㎡，产品远销东南亚、中东、非洲、南美等30多个国家和地区。',
     about_li1: '8条全自动共挤生产线', about_li2: '自有实验室 & 配色中心',
-    about_li3: 'ISO 9001 · CE · SGS 认证', about_li4: 'OEM/ODM — 定制颜色、尺寸、厚度、包装',
+    about_li3: '自有配色实验室 & 质检中心', about_li4: 'OEM/ODM — 定制颜色、尺寸、厚度、包装',
     about_btn: '合作洽谈 ▸', about_badge_year: '始于',
 
-    prod1_overline: '旗舰产品', prod1_title: 'ASA西班牙式合成树脂瓦',
+    prod1_overline: '旗舰产品', prod1_title: 'ASA高耐候合成树脂瓦',
     prod1_subtitle: '3层共挤核心技术 — 住宅、商业建筑、别墅项目的终极屋面方案',
     prod1_name: 'ASA合成树脂瓦', prod1_tag: '畅销产品',
-    prod1_desc: '三层共挤技术：ASA耐候表层 + 抗冲击PVC芯层 + 增强底层。经典西班牙瓦型，219mm节距，融合地中海建筑美学与现代材料科学。',
+    prod1_desc: '三层共挤技术：ASA耐候表层 + 抗冲击PVC芯层 + 增强底层。经典建筑瓦型，219mm节距，融合现代建筑美学与尖端材料科学。',
     spec_width: '宽度', spec_thick: '厚度', spec_length2: '长度', spec_life: '使用寿命',
     spec_fire: '防火等级', spec_warranty2: '质保', spec_colors: '可选颜色：',
     prod_inquiry: '询价 ASA 树脂瓦 ▸',
@@ -54,10 +54,10 @@ const i18n = {
     app3: '度假村&寺庙', app4: '工业厂房', app5: '农业&农村', app6: '车棚&雨棚',
 
     factory_title: '佛山工厂实拍', factory_subtitle: '广东现代化生产基地 — 随时欢迎实地参观考察',
-    fac1: '全自动共挤生产线', fac2: '质量检测实验室', fac3: '成品仓库', fac4: '集装箱装货发运',
+    fac1: 'ASA树脂瓦共挤生产线', fac2: '生产制造车间', fac3: '成品仓库', fac4: '集装箱装货发运',
 
     cases_title: '全球工程案例', cases_subtitle: '产品远销30+国家，品质受全球客户信赖',
-    case1_title: '马尼拉住宅小区', case1_desc: '500套住宅，80,000㎡ ASA西班牙式树脂瓦',
+    case1_title: '马尼拉住宅小区', case1_desc: '500套住宅，80,000㎡ ASA树脂瓦',
     case2_title: '内罗毕大教堂', case2_desc: '标志性教堂屋面翻新项目',
     case3_title: '曼谷豪华度假村', case3_desc: '定制赤陶色ASA瓦，适应热带气候',
     case4_title: '圣保罗工业园', case4_desc: '12栋厂房，100,000㎡ PVC波浪瓦',
@@ -95,8 +95,8 @@ const i18n = {
     logo_tag: 'Roofing Manufacturer',
     nav_catalog: '📦 Catalogs ▾', nav_home: 'Home', nav_asa: 'ASA Tile', nav_pvc: 'PVC Sheet', nav_why: 'Why Us',
     nav_factory: 'Factory', nav_faq: 'FAQ', nav_contact: 'Contact', get_quote: 'Get Quote',
-    cat_asa_title: 'ASA Tile Series', cat_asa_spanish: 'Spanish Style Tile', cat_asa_specs: 'Specs & Colors', cat_asa_custom: 'Custom OEM Orders',
-    cat_pvc_title: 'PVC Sheet Series', cat_pvc_corrugated: 'Corrugated Sheet', cat_pvc_specs: 'Specs & Colors', cat_pvc_custom: 'Custom OEM Orders',
+    cat_asa_title: 'ASA Tile Series', cat_asa_spanish: 'ASA Synthetic Resin Tile', cat_asa_specs: 'Specs & Colors', cat_asa_custom: 'Custom OEM Orders',
+    cat_pvc_title: 'PVC Sheet Series', cat_pvc_corrugated: 'PVC Corrugated Sheet', cat_pvc_specs: 'Specs & Colors', cat_pvc_custom: 'Custom OEM Orders',
 
     hero_badge: 'Since 2016 · 20 Production Lines · Foshan China',
     hero_title: 'ASA Synthetic Resin Tile & PVC Corrugated Roofing Sheet',
@@ -109,13 +109,13 @@ const i18n = {
     about_p1: 'Founded in 2016, <strong>Dingshengan</strong> is a professional manufacturer of ASA synthetic resin roof tiles and PVC corrugated sheets. Located in <strong>Foshan, Guangdong</strong> — the heart of China\'s building materials industry — we integrate R&D, production, and global sales.',
     about_p2: 'Our modern factory is equipped with 8 automated co-extrusion lines and an in-house QC lab. With 50M+ ㎡ annual output, we serve distributors, contractors, and wholesalers across Southeast Asia, the Middle East, Africa, South America, and beyond.',
     about_li1: '8 automated co-extrusion lines', about_li2: 'In-house color lab & QC center',
-    about_li3: 'ISO 9001 · CE · SGS certified', about_li4: 'OEM/ODM — custom color, size, packaging',
+    about_li3: 'In-house color lab & QC center', about_li4: 'OEM/ODM — custom color, size, packaging',
     about_btn: 'Partner With Us ▸', about_badge_year: 'Since',
 
-    prod1_overline: 'Flagship Product', prod1_title: 'ASA Spanish-style Synthetic Resin Roof Tile',
+    prod1_overline: 'Flagship Product', prod1_title: 'ASA Premium Synthetic Resin Roof Tile',
     prod1_subtitle: 'Premium 3-layer co-extrusion — the ultimate roofing solution for residential, commercial & villa projects',
     prod1_name: 'ASA Synthetic Resin Roof Tile', prod1_tag: 'Best Seller',
-    prod1_desc: '3-layer co-extrusion: ASA weather-proof surface + impact-resistant PVC core + reinforced bottom layer. Classic Spanish profile with 219mm pitch, delivering elegant Mediterranean aesthetics with modern material science.',
+    prod1_desc: '3-layer co-extrusion: ASA weather-proof surface + impact-resistant PVC core + reinforced bottom layer. Classic wave profile with 219mm pitch, delivering elegant architectural aesthetics with modern material science.',
     spec_width: 'Width', spec_thick: 'Thickness', spec_length2: 'Length', spec_life: 'Service Life',
     spec_fire: 'Fire Rating', spec_warranty2: 'Warranty', spec_colors: 'Available Colors:',
     prod_inquiry: 'Inquire ASA Resin Tile ▸',
@@ -144,7 +144,7 @@ const i18n = {
 
     factory_title: 'Inside Our Foshan Factory',
     factory_subtitle: 'Modern production facility in Guangdong — welcome to visit anytime',
-    fac1: 'Automated Co-extrusion Lines', fac2: 'Quality Control Lab',
+    fac1: 'ASA Tile Co-extrusion Lines', fac2: 'Production Workshop',
     fac3: 'Finished Goods Warehouse', fac4: 'Container Loading & Export',
 
     cases_title: 'Global Project Cases', cases_subtitle: 'Trusted by contractors & distributors across 30+ countries',
@@ -205,7 +205,7 @@ function applyLang(l) {
   const sel = document.querySelector('select[name="product"]');
   if (sel && sel.options) {
     const opts = [[l === 'zh' ? '— 请选择 —' : '— Please Select —', ''],
-      ['ASA Spanish Resin Tile', 'ASA'], ['UPVC Corrugated Sheet', 'PVC'],
+      ['ASA Synthetic Resin Tile', 'ASA'], ['UPVC Corrugated Sheet', 'PVC'],
       [l === 'zh' ? '两种都需要' : 'Both Products', 'Both']];
     opts.forEach((o, i) => { if (sel.options[i]) sel.options[i].textContent = o[0]; });
   }
