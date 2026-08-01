@@ -6,15 +6,17 @@
 const i18n = {
   zh: {
     logo_tag: '屋面瓦制造商',
-    nav_home: '首页', nav_asa: 'ASA树脂瓦', nav_pvc: 'PVC波浪瓦', nav_why: '为什么选我们',
+    nav_catalog: '📦 产品目录 ▾', nav_home: '首页', nav_asa: 'ASA树脂瓦', nav_pvc: 'PVC波浪瓦', nav_why: '为什么选我们',
     nav_factory: '工厂实拍', nav_faq: '常见问题', nav_contact: '联系我们', get_quote: '立即询价',
+    cat_asa_title: 'ASA树脂瓦系列', cat_asa_spanish: '西班牙式树脂瓦', cat_asa_specs: '规格参数 & 颜色', cat_asa_custom: '定制 OEM 订单',
+    cat_pvc_title: 'PVC波浪瓦系列', cat_pvc_corrugated: '波浪瓦/梯形瓦', cat_pvc_specs: '规格参数 & 颜色', cat_pvc_custom: '定制 OEM 订单',
 
-    hero_badge: '10年专业屋面瓦制造经验',
+    hero_badge: 'Since 2016 · 20条生产线 · 中国佛山',
     hero_title: 'ASA合成树脂瓦 & PVC波浪瓦屋面材料',
     hero_subtitle: 'B1防火 · 30年质保 · OEM/ODM · 全球发货 · 中国佛山工厂',
     hero_inquiry: '立即询价', hero_products: '查看产品 ▸',
     trust1: 'ISO 9001 认证', trust2: 'B1 防火等级', trust3: 'CE & SGS 检测', trust4: '出口30+国家',
-    stat1: '年行业经验', stat2: '㎡ 年产量', stat3: '条生产线', stat4: '满意客户',
+    stat1: '条自动化生产线', stat2: '㎡ 年产量', stat3: '成立年份', stat4: '全球客户',
 
     about_heading: 'Dingshengan — 您值得信赖的佛山屋面瓦制造商',
     about_p1: '<strong>Dingshengan（鼎盛安建材）</strong>成立于2016年，是一家专业生产ASA合成树脂瓦和PVC波浪瓦的制造商。公司位于<strong>广东省佛山市</strong>——中国建材行业的中心地带，集研发、生产和全球销售于一体。',
@@ -91,15 +93,17 @@ const i18n = {
 
   en: {
     logo_tag: 'Roofing Manufacturer',
-    nav_home: 'Home', nav_asa: 'ASA Tile', nav_pvc: 'PVC Sheet', nav_why: 'Why Us',
+    nav_catalog: '📦 Catalogs ▾', nav_home: 'Home', nav_asa: 'ASA Tile', nav_pvc: 'PVC Sheet', nav_why: 'Why Us',
     nav_factory: 'Factory', nav_faq: 'FAQ', nav_contact: 'Contact', get_quote: 'Get Quote',
+    cat_asa_title: 'ASA Tile Series', cat_asa_spanish: 'Spanish Style Tile', cat_asa_specs: 'Specs & Colors', cat_asa_custom: 'Custom OEM Orders',
+    cat_pvc_title: 'PVC Sheet Series', cat_pvc_corrugated: 'Corrugated Sheet', cat_pvc_specs: 'Specs & Colors', cat_pvc_custom: 'Custom OEM Orders',
 
-    hero_badge: '10 Years Professional Roofing Manufacturer',
+    hero_badge: 'Since 2016 · 20 Production Lines · Foshan China',
     hero_title: 'ASA Synthetic Resin Tile & PVC Corrugated Roofing Sheet',
     hero_subtitle: 'B1 Fireproof · 30-Year Warranty · OEM & ODM · Global Shipping · Foshan China Factory',
     hero_inquiry: 'Send Inquiry Now', hero_products: 'Explore Products ▸',
     trust1: 'ISO 9001 Certified', trust2: 'B1 Fire Rating', trust3: 'CE & SGS Tested', trust4: 'Export 30+ Countries',
-    stat1: 'Years Experience', stat2: '㎡ Annual Output', stat3: 'Production Lines', stat4: 'Happy Clients',
+    stat1: 'Automated Lines', stat2: '㎡ Annual Output', stat3: 'Founded Year', stat4: 'Global Clients',
 
     about_heading: 'Dingshengan — Your Trusted Roofing Manufacturer in Foshan',
     about_p1: 'Founded in 2016, <strong>Dingshengan</strong> is a professional manufacturer of ASA synthetic resin roof tiles and PVC corrugated sheets. Located in <strong>Foshan, Guangdong</strong> — the heart of China\'s building materials industry — we integrate R&D, production, and global sales.',
