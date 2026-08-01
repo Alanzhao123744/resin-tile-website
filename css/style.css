@@ -19,7 +19,8 @@
   --txt-on-dark: #CBD5E1;
   --bdr: #E2E8F0;
   --grn: #16A34A;
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+  --font: "Poppins", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-heading: "Poppins", "Noto Sans SC", sans-serif;
   --max: 1200px;
   --head-h: 72px;
   --rad: 6px;
@@ -46,7 +47,7 @@ input,textarea,select{font-family:inherit;font-size:inherit}
 .section__header{text-align:center;margin-bottom:56px}
 .section__header--light .section__title{color:var(--wht)}
 .section__header--light .section__subtitle{color:var(--txt-on-dark);opacity:.8}
-.section__title{font-size:2.1rem;font-weight:800;color:var(--pri);margin-bottom:12px;line-height:1.3}
+.section__title{font-size:2.1rem;font-weight:800;color:var(--pri);margin-bottom:12px;line-height:1.3;font-family:var(--font-heading)}
 .section__title--left{text-align:left}
 .section__subtitle{font-size:1.1rem;color:var(--txt-light);max-width:650px;margin:0 auto}
 .section__overline{display:inline-block;text-transform:uppercase;letter-spacing:2px;font-size:.85rem;font-weight:700;color:var(--acc);margin-bottom:8px}
@@ -92,17 +93,20 @@ body{top:0!important}
 .header__logo-mark{width:42px;height:42px;background:var(--pri);color:var(--wht);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.3rem;border-radius:var(--rad);flex-shrink:0}
 .header__logo-name{font-weight:800;font-size:1.15rem;color:var(--pri);line-height:1.2}
 .header__logo-tag{font-size:.7rem;color:var(--txt-light);text-transform:uppercase;letter-spacing:1px}
-.header__nav-list{display:flex;gap:2px;align-items:center}
-.header__nav-link{padding:10px 14px;border-radius:var(--rad);font-size:.9rem;font-weight:500;color:var(--txt);transition:all var(--tr)}
+.header__nav-list{display:flex;gap:10px;align-items:center}
+.header__nav-link{padding:10px 16px;border-radius:var(--rad);font-size:.88rem;font-weight:500;color:var(--txt);transition:all var(--tr);font-family:var(--font-heading)}
 .header__nav-link:hover{background:var(--bg-alt);color:var(--pri)}
-/* Catalog tabs */
-.header__nav-cat{padding:10px 18px;border-radius:var(--rad);font-size:.9rem;font-weight:700;color:var(--pri);transition:all var(--tr);background:var(--bg-alt)}
-.header__nav-cat:hover{background:var(--acc);color:var(--wht)}
-.header__nav-cat--active{background:var(--acc);color:var(--wht)}
-.nav-sep{color:var(--bdr);font-weight:300;margin:0 4px;font-size:1rem;user-select:none}
+.header__nav-link--cta{background:var(--acc);color:var(--wht)!important;font-weight:700;padding:10px 20px}
+.header__nav-link--cta:hover{background:var(--acc-dark)!important;color:var(--wht)!important}
 
-.header__cta-btn{background:var(--acc);color:var(--wht);padding:10px 20px;border-radius:var(--rad);font-size:.9rem;font-weight:700;transition:all var(--tr);white-space:nowrap}
-.header__cta-btn:hover{background:var(--acc-dark)}
+/* Big Catalog Buttons */
+.header__cat-btn{padding:12px 28px;border-radius:50px;font-size:1rem;font-weight:700;color:var(--wht);transition:all .3s ease;font-family:var(--font-heading);letter-spacing:.3px;position:relative;overflow:hidden}
+.header__cat-btn:first-child{background:linear-gradient(135deg,var(--acc),var(--acc-dark));box-shadow:0 4px 16px rgba(232,120,26,.35)}
+.header__cat-btn:first-child:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,120,26,.5)}
+.header__cat-btn:nth-child(2){background:linear-gradient(135deg,var(--pri),var(--pri-light));box-shadow:0 4px 16px rgba(13,33,55,.3)}
+.header__cat-btn:nth-child(2):hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(13,33,55,.45)}
+
+.header__cta-btn{display:none}
 .header__menu-btn{display:none;flex-direction:column;gap:5px;background:none;padding:4px}
 .header__menu-btn span{width:22px;height:2px;background:var(--pri);border-radius:2px;transition:var(--tr)}
 .header__menu-btn.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
