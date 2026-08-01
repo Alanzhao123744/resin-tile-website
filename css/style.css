@@ -99,12 +99,15 @@ body{top:0!important}
 .header__nav-link--cta{background:var(--acc);color:var(--wht)!important;font-weight:700;padding:10px 20px}
 .header__nav-link--cta:hover{background:var(--acc-dark)!important;color:var(--wht)!important}
 
-/* Big Catalog Buttons */
-.header__cat-btn{padding:12px 28px;border-radius:50px;font-size:1rem;font-weight:700;color:var(--wht);transition:all .3s ease;font-family:var(--font-heading);letter-spacing:.3px;position:relative;overflow:hidden}
-.header__cat-btn:first-child{background:linear-gradient(135deg,var(--acc),var(--acc-dark));box-shadow:0 4px 16px rgba(232,120,26,.35)}
-.header__cat-btn:first-child:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,120,26,.5)}
-.header__cat-btn:nth-child(2){background:linear-gradient(135deg,var(--pri),var(--pri-light));box-shadow:0 4px 16px rgba(13,33,55,.3)}
-.header__cat-btn:nth-child(2):hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(13,33,55,.45)}
+/* Catalog Pill Buttons — all 6 */
+.header__nav-list{display:flex;gap:10px;align-items:center}
+.header__nav-link{padding:12px 22px;border-radius:50px;font-size:.92rem;font-weight:700;color:var(--wht);transition:all .3s ease;font-family:var(--font-heading);letter-spacing:.3px;background:linear-gradient(135deg,var(--pri),var(--pri-light));box-shadow:0 4px 14px rgba(13,33,55,.25)}
+.header__nav-link:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(13,33,55,.4);color:var(--wht)}
+.header__nav-link--cta{background:linear-gradient(135deg,var(--acc),var(--acc-dark));box-shadow:0 4px 14px rgba(232,120,26,.35)}
+.header__nav-link--cta:hover{box-shadow:0 8px 22px rgba(232,120,26,.5)}
+/* Product catalog buttons — orange accent */
+.header__cat-btn{padding:12px 28px;border-radius:50px;font-size:1rem;font-weight:700;color:var(--wht);transition:all .3s ease;font-family:var(--font-heading);letter-spacing:.3px;background:linear-gradient(135deg,var(--acc),var(--acc-dark));box-shadow:0 4px 16px rgba(232,120,26,.35)}
+.header__cat-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,120,26,.5)}
 
 .header__cta-btn{display:none}
 .header__menu-btn{display:none;flex-direction:column;gap:5px;background:none;padding:4px}
