@@ -69,6 +69,12 @@ const i18n = {
     order3_title: '生产制造', order3_desc: '30%定金确认订单。20条自动生产线15-25天完成。每周发送生产进度照片。',
     order4_title: '发货交付', order4_desc: '发货前付清尾款。集装箱从佛山发往您的港口。我们处理所有出口单证。',
 
+    scroll_down: 'Scroll to explore',
+    testi_overline: '客户评价', testi_title: '客户怎么说',
+    testi1_text: '"与 Dingshengan 合作进口 ASA 树脂瓦 3 年了。品质始终稳定，交货准时。我们在菲律宾的屋面项目首选供应商。"',
+    testi2_text: '"为肯尼亚仓库项目订购了 3 个集装箱 PVC 波浪瓦。包装完美，零破损。团队还帮我们处理了清关文件。"',
+    testi3_text: '"曼谷度假村定制赤陶色 — 完美匹配。3 年热带气候无褪色。下一期工程会继续采购。"',
+
     factory_title: '佛山工厂实拍', factory_subtitle: '广东现代化生产基地 — 随时欢迎实地参观考察',
     fac1: 'ASA树脂瓦共挤生产线', fac2: '生产制造车间', fac3: '树脂瓦产品制造', fac4: '屋面安装实景',
 
@@ -173,6 +179,12 @@ const i18n = {
     order2_title: 'Confirm Details', order2_desc: 'We confirm specs, colors, packaging, and shipping terms. Free samples before bulk order.',
     order3_title: 'Production', order3_desc: '30% deposit confirms your order. 20 automated lines produce within 15-25 days. Weekly progress photos.',
     order4_title: 'Shipping & Delivery', order4_desc: 'Balance payment before loading. Container shipped from Foshan to your port. All export docs handled.',
+
+    scroll_down: 'Scroll to explore',
+    testi_overline: 'Testimonials', testi_title: 'What Our Clients Say',
+    testi1_text: '"We\'ve been importing ASA tiles from Dingshengan for 3 years. Quality is consistent, delivery always on time. Our go-to supplier for roofing projects in the Philippines."',
+    testi2_text: '"Ordered 3 containers of PVC corrugated sheets for our warehouse project in Kenya. Packing was perfect, zero damage. The team even helped with customs documentation."',
+    testi3_text: '"Custom terracotta color for our Bangkok resort — perfectly matched. 3 years in tropical climate and no fading. Will reorder for our next phase."',
 
     factory_title: 'Inside Our Foshan Factory',
     factory_subtitle: 'Modern production facility in Guangdong — welcome to visit anytime',
