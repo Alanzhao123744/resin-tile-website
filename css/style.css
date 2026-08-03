@@ -208,6 +208,11 @@ body{top:0!important}
 .spec-item{background:var(--wht);padding:14px 16px;text-align:center}
 .spec-item__label{display:block;font-size:.75rem;color:var(--txt-light);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
 .spec-item__val{display:block;font-weight:700;font-size:.95rem;color:var(--pri)}
+.product-detail__spec-img{margin:20px 0;border-radius:var(--rad-lg);overflow:hidden;box-shadow:var(--sh)}
+.product-detail__spec-img img{width:100%;display:block}
+.product-detail__spec-dual{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+.product-detail__spec-dual img{width:100%;border-radius:var(--rad);box-shadow:var(--sh)}
+
 .product-detail__colors{margin-bottom:22px}
 .product-detail__colors-label{font-weight:600;font-size:.85rem;color:var(--pri);margin-bottom:8px;display:block}
 .color-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
