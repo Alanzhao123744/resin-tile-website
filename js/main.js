@@ -108,6 +108,7 @@ const i18n = {
 
     footer_desc: 'Dingshengan 专业ASA合成树脂瓦和PVC波浪瓦制造商，位于中国广东佛山。优质产品、实惠价格、全球发货。',
     footer_products_title: '产品', footer_links_title: '快速导航', footer_contact_title: '联系我们',
+    privacy_note: '您的信息仅用于回复询价，绝不会被分享。',
     footer_asa: 'ASA合成树脂瓦', footer_pvc: 'PVC波浪瓦', footer_oem: '定制/OEM订单',
 
     form_success_title: '询价已发送！✅', form_success_text: '感谢您的咨询，我们将在24小时内回复。',
@@ -221,6 +222,7 @@ const i18n = {
 
     footer_desc: 'Professional ASA resin tile & PVC roofing sheet manufacturer based in Foshan, Guangdong, China. Quality products, competitive pricing, global shipping since 2016.',
     footer_products_title: 'Products', footer_links_title: 'Quick Links', footer_contact_title: 'Contact',
+    privacy_note: 'Your data will only be used to respond to your inquiry — never shared.',
     footer_asa: 'ASA Resin Tile', footer_pvc: 'PVC Corrugated Sheet', footer_oem: 'Custom / OEM Orders',
 
     form_success_title: 'Inquiry Sent! ✅', form_success_text: 'Thank you! We will reply within 24 hours.',
