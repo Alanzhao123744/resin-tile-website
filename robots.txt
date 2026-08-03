@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://dingshengan-roof.com/sitemap.xml
+Sitemap: https://dingshengan.com/sitemap.xml
