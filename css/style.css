@@ -179,15 +179,26 @@ body{top:0!important}
 
 /* Product Image Carousel */
 .product-carousel{aspect-ratio:4/3}
-.product-carousel__slides{display:flex;width:400%;height:100%;animation:carouselSlide 16s ease-in-out infinite}
-.product-carousel__slides img{width:25%;height:100%;object-fit:cover;flex-shrink:0}
-@keyframes carouselSlide{
+.product-carousel__slides{display:flex;height:100%;animation:carouselSlide4 16s ease-in-out infinite}
+.product-carousel__slides img{height:100%;object-fit:cover;flex-shrink:0}
+.product-carousel__slides:not(.product-carousel--3){width:400%}
+.product-carousel__slides:not(.product-carousel--3) img{width:25%}
+.product-carousel--3{width:300%}
+.product-carousel--3 img{width:33.333%}
+@keyframes carouselSlide4{
   0%,22%{transform:translateX(0)}
   25%,47%{transform:translateX(-25%)}
   50%,72%{transform:translateX(-50%)}
   75%,97%{transform:translateX(-75%)}
   100%{transform:translateX(0)}
 }
+@keyframes carouselSlide3{
+  0%,28%{transform:translateX(0)}
+  33%,61%{transform:translateX(-33.333%)}
+  66%,95%{transform:translateX(-66.666%)}
+  100%{transform:translateX(0)}
+}
+.product-carousel--3{animation-name:carouselSlide3}
 .product-detail__thumbs{display:flex;gap:10px}
 .product-detail__thumbs img{width:85px;height:60px;object-fit:cover;border-radius:var(--rad);cursor:pointer;border:2px solid transparent;transition:border var(--tr)}
 .product-detail__thumbs img:hover{border-color:var(--acc)}
