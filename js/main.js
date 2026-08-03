@@ -76,7 +76,7 @@ const i18n = {
     testi3_text: '"曼谷度假村定制赤陶色 — 完美匹配。3 年热带气候无褪色。下一期工程会继续采购。"',
 
     factory_title: '佛山工厂实拍', factory_subtitle: '广东现代化生产基地 — 随时欢迎实地参观考察',
-    fac1: 'ASA树脂瓦共挤生产线', fac2: '生产制造车间', fac3: '树脂瓦产品制造', fac4: '屋面安装实景',
+    fac1: 'ASA树脂瓦共挤生产线', fac2: '生产制造车间', fac3: '树脂瓦产品制造', fac4: '产品质检与包装',
 
     cases_title: '全球工程案例', cases_subtitle: '产品远销30+国家，品质受全球客户信赖',
     case1_title: '马尼拉住宅小区', case1_desc: '500套住宅，80,000㎡ ASA树脂瓦',
@@ -190,7 +190,7 @@ const i18n = {
     factory_title: 'Inside Our Foshan Factory',
     factory_subtitle: 'Modern production facility in Guangdong — welcome to visit anytime',
     fac1: 'ASA Tile Co-extrusion Lines', fac2: 'Production Workshop',
-    fac3: 'Resin Tile Manufacturing', fac4: 'Roof Installation View',
+    fac3: 'Resin Tile Manufacturing', fac4: 'QC & Packaging',
 
     cases_title: 'Global Project Cases', cases_subtitle: 'Trusted by contractors & distributors across 30+ countries',
     case1_title: 'Manila Residential Complex', case1_desc: '80,000㎡ ASA tiles for 500-unit development',

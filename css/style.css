@@ -244,7 +244,7 @@ body{top:0!important}
 .cmp-table tbody tr:hover td.is-us{background:#FFECD0}
 
 /* ---------- Applications ---------- */
-.apps__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.apps__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .app-card{position:relative;border-radius:var(--rad-lg);overflow:hidden;aspect-ratio:4/3;cursor:pointer}
 .app-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .app-card:hover img{transform:scale(1.06)}
@@ -394,6 +394,7 @@ body{top:0!important}
   .header__cta-btn{display:none}
   .header__menu-btn{display:flex}
   .why__grid,.apps__grid,.cases__grid,.factory__grid,.certs__grid,.acc__grid{grid-template-columns:1fr}
+  .apps__grid{grid-template-columns:repeat(2,1fr)}
   .faq__grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
   .contact__form{padding:24px}
