@@ -9,6 +9,10 @@ const i18n = {
     nav_home: '首页', nav_asa_cat: 'ASA树脂瓦', nav_pvc_cat: 'PVC波浪瓦', nav_acc_cat: '配件辅材', nav_why: '为什么选我们',
     nav_factory: '工厂实拍', nav_faq: '常见问题', nav_contact: '联系我们', get_quote: '立即询价',
 
+    quick_asa_title: 'ASA合成树脂瓦', quick_asa_desc: '高端屋面材料 · 30年质保', quick_asa_cta: '查看产品 ▸',
+    quick_pvc_title: 'PVC波浪瓦', quick_pvc_desc: '工业农业屋面 · 高性价比', quick_pvc_cta: '查看产品 ▸',
+    quick_acc_title: '配件 & 辅材', quick_acc_desc: '脊瓦螺丝天沟 · 一站采购', quick_acc_cta: '查看配件 ▸',
+
     hero_badge: 'Since 2016 · 20条生产线 · 中国佛山',
     hero_title: 'ASA合成树脂瓦 & PVC波浪瓦屋面材料',
     hero_subtitle: 'B1防火 · 30年质保 · OEM/ODM · 全球发货 · 中国佛山工厂',
@@ -100,6 +104,10 @@ const i18n = {
     logo_tag: 'Roofing Manufacturer',
     nav_home: 'Home', nav_asa_cat: 'ASA Resin Tile', nav_pvc_cat: 'PVC Sheet', nav_acc_cat: 'Accessories', nav_why: 'Why Us',
     nav_factory: 'Factory', nav_faq: 'FAQ', nav_contact: 'Contact', get_quote: 'Get Quote',
+
+    quick_asa_title: 'ASA Resin Tile', quick_asa_desc: 'Premium roofing — 30 year warranty', quick_asa_cta: 'View Product ▸',
+    quick_pvc_title: 'PVC Sheet', quick_pvc_desc: 'Industrial & agricultural — affordable', quick_pvc_cta: 'View Product ▸',
+    quick_acc_title: 'Accessories', quick_acc_desc: 'Ridge, fasteners, gutters — all in one', quick_acc_cta: 'View Parts ▸',
 
     hero_badge: 'Since 2016 · 20 Production Lines · Foshan China',
     hero_title: 'ASA Synthetic Resin Tile & PVC Corrugated Roofing Sheet',

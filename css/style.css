@@ -130,6 +130,24 @@ body{top:0!important}
 .hero__stat-num{display:block;font-size:2rem;font-weight:900;color:var(--acc-light);margin-bottom:2px}
 .hero__stat-lbl{font-size:.85rem;opacity:.7}
 
+/* ---------- Quick Nav Cards ---------- */
+.quicknav__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.quicknav-card{position:relative;border-radius:var(--rad-lg);overflow:hidden;min-height:280px;display:flex;align-items:flex-end;cursor:pointer;transition:all .35s ease;text-decoration:none;color:var(--wht)}
+.quicknav-card:hover{transform:translateY(-6px);box-shadow:var(--sh-lg)}
+.quicknav-card__bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .5s ease}
+.quicknav-card:hover .quicknav-card__bg{transform:scale(1.08)}
+.quicknav-card__bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(6,15,26,.92) 0%,rgba(6,15,26,.35) 50%,rgba(6,15,26,.1) 100%)}
+.quicknav-card__body{position:relative;z-index:1;padding:28px 24px;width:100%}
+.quicknav-card__icon{font-size:2rem;display:block;margin-bottom:10px}
+.quicknav-card h3{font-size:1.3rem;font-weight:800;margin-bottom:6px;font-family:var(--font-heading)}
+.quicknav-card p{font-size:.9rem;opacity:.85;margin-bottom:12px;line-height:1.5}
+.quicknav-card__link{display:inline-block;font-weight:700;font-size:.9rem;color:var(--acc-light);transition:all .25s}
+.quicknav-card:hover .quicknav-card__link{color:var(--wht);padding-left:4px}
+
+@media(max-width:768px){
+  .quicknav__grid{grid-template-columns:1fr}
+}
+
 /* ---------- About ---------- */
 .about-strip__grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .about-strip__image{position:relative;border-radius:var(--rad-lg);overflow:hidden;box-shadow:var(--sh-lg)}
