@@ -242,6 +242,20 @@ body{top:0!important}
 .cert-card h3{font-size:1.1rem;font-weight:700;color:var(--pri);margin-bottom:4px}
 .cert-card p{font-size:.9rem;color:var(--txt-light)}
 
+/* ---------- Order Timeline ---------- */
+.order__timeline{display:flex;align-items:flex-start;justify-content:center;gap:0;max-width:1100px;margin:0 auto}
+.order-step{flex:1;text-align:center;padding:0 16px}
+.order-step__num{display:inline-block;width:36px;height:36px;line-height:36px;border-radius:50%;background:var(--acc);color:var(--wht);font-weight:800;font-size:.85rem;font-family:var(--font-heading);margin-bottom:12px}
+.order-step__icon{font-size:2.4rem;margin-bottom:12px}
+.order-step h3{font-size:1.1rem;font-weight:700;color:var(--pri);margin-bottom:8px;font-family:var(--font-heading)}
+.order-step p{font-size:.88rem;color:var(--txt-light);line-height:1.7}
+.order-step__arrow{font-size:1.8rem;color:var(--acc);padding-top:60px;flex-shrink:0}
+
+@media(max-width:768px){
+  .order__timeline{flex-direction:column;align-items:center;gap:0}
+  .order-step__arrow{transform:rotate(90deg);padding-top:12px;padding-bottom:12px}
+}
+
 /* ---------- FAQ ---------- */
 .faq__grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:960px;margin:0 auto}
 .faq-item{border:1px solid var(--bdr);border-radius:var(--rad);overflow:hidden;background:var(--wht)}

@@ -6,7 +6,7 @@
 const i18n = {
   zh: {
     logo_tag: '屋面瓦制造商',
-    nav_home: '首页', nav_asa_cat: 'ASA树脂瓦', nav_pvc_cat: 'PVC波浪瓦', nav_acc_cat: '配件辅材', nav_why: '为什么选我们',
+    nav_home: '首页', nav_asa_cat: 'ASA树脂瓦', nav_pvc_cat: 'PVC波浪瓦', nav_acc_cat: '配件辅材', nav_order: '采购流程', nav_why: '为什么选我们',
     nav_factory: '工厂实拍', nav_faq: '常见问题', nav_contact: '联系我们', get_quote: '立即询价',
 
     quick_asa_title: 'ASA合成树脂瓦', quick_asa_desc: '高端屋面材料 · 30年质保', quick_asa_cta: '查看产品 ▸',
@@ -62,6 +62,12 @@ const i18n = {
     apps_title: '应用场景', app1: '住宅别墅', app2: '商业建筑',
     app3: '度假村&寺庙', app4: '工业厂房', app5: '农业&农村', app6: '车棚&雨棚',
 
+    order_overline: '采购流程', order_title: '如何订购 — 4步简单流程', order_subtitle: '从询价到交货 — 让全球采购变得简单',
+    order1_title: '发送询价', order1_desc: '告诉我们您的需求 — 数量、颜色、尺寸、目的港。24小时内回复详细报价。',
+    order2_title: '确认细节', order2_desc: '确认规格、颜色、包装和运输条款。大货前可先寄免费样品确认。',
+    order3_title: '生产制造', order3_desc: '30%定金确认订单。20条自动生产线15-25天完成。每周发送生产进度照片。',
+    order4_title: '发货交付', order4_desc: '发货前付清尾款。集装箱从佛山发往您的港口。我们处理所有出口单证。',
+
     factory_title: '佛山工厂实拍', factory_subtitle: '广东现代化生产基地 — 随时欢迎实地参观考察',
     fac1: 'ASA树脂瓦共挤生产线', fac2: '生产制造车间', fac3: '树脂瓦产品制造', fac4: '屋面安装实景',
 
@@ -102,7 +108,7 @@ const i18n = {
 
   en: {
     logo_tag: 'Roofing Manufacturer',
-    nav_home: 'Home', nav_asa_cat: 'ASA Resin Tile', nav_pvc_cat: 'PVC Sheet', nav_acc_cat: 'Accessories', nav_why: 'Why Us',
+    nav_home: 'Home', nav_asa_cat: 'ASA Resin Tile', nav_pvc_cat: 'PVC Sheet', nav_acc_cat: 'Accessories', nav_order: 'How to Order', nav_why: 'Why Us',
     nav_factory: 'Factory', nav_faq: 'FAQ', nav_contact: 'Contact', get_quote: 'Get Quote',
 
     quick_asa_title: 'ASA Resin Tile', quick_asa_desc: 'Premium roofing — 30 year warranty', quick_asa_cta: 'View Product ▸',
@@ -159,6 +165,12 @@ const i18n = {
     apps_title: 'Where Our Tiles Are Used',
     app1: 'Residential Villas', app2: 'Commercial Buildings', app3: 'Resorts & Temples',
     app4: 'Industrial Plants', app5: 'Rural & Farm', app6: 'Carports & Shelters',
+
+    order_overline: 'How It Works', order_title: 'How to Order — 4 Simple Steps', order_subtitle: 'From inquiry to delivery — we make global sourcing easy',
+    order1_title: 'Send Inquiry', order1_desc: 'Tell us your requirements — quantity, color, size, destination port. We reply within 24 hours.',
+    order2_title: 'Confirm Details', order2_desc: 'We confirm specs, colors, packaging, and shipping terms. Free samples before bulk order.',
+    order3_title: 'Production', order3_desc: '30% deposit confirms your order. 20 automated lines produce within 15-25 days. Weekly progress photos.',
+    order4_title: 'Shipping & Delivery', order4_desc: 'Balance payment before loading. Container shipped from Foshan to your port. All export docs handled.',
 
     factory_title: 'Inside Our Foshan Factory',
     factory_subtitle: 'Modern production facility in Guangdong — welcome to visit anytime',
