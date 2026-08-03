@@ -6,7 +6,7 @@
 const i18n = {
   zh: {
     logo_tag: '屋面瓦制造商',
-    nav_home: '首页', nav_asa_cat: 'ASA树脂瓦', nav_pvc_cat: 'PVC波浪瓦', nav_why: '为什么选我们',
+    nav_home: '首页', nav_asa_cat: 'ASA树脂瓦', nav_pvc_cat: 'PVC波浪瓦', nav_acc_cat: '配件辅材', nav_why: '为什么选我们',
     nav_factory: '工厂实拍', nav_faq: '常见问题', nav_contact: '联系我们', get_quote: '立即询价',
 
     hero_badge: 'Since 2016 · 20条生产线 · 中国佛山',
@@ -22,6 +22,13 @@ const i18n = {
     about_li1: '20条全自动共挤生产线', about_li2: '自有实验室 & 配色中心',
     about_li3: '自有配色实验室 & 质检中心', about_li4: 'OEM/ODM — 定制颜色、尺寸、厚度、包装',
     about_btn: '合作洽谈 ▸', about_badge_year: '始于',
+
+    acc_overline: '一站式采购', acc_title: '配件 & 屋面辅材', acc_subtitle: '完善您的屋面系统 — 脊瓦、螺丝套件、封檐板、天沟一应俱全',
+    acc1_name: '脊瓦 / Ridge Tile', acc1_desc: '配套ASA脊瓦，无缝屋脊收口',
+    acc2_name: '螺丝套件 / Fastener Kit', acc2_desc: '防腐蚀螺丝 + EPDM防水垫圈',
+    acc3_name: '封檐板 / Edge Trim', acc3_desc: '抗UV PVC封边，整洁山墙收口',
+    acc4_name: '天沟系统 / Gutter', acc4_desc: 'PVC雨水槽+落水管，完整排水方案',
+    acc5_name: '防水帽 / Waterproof Cap', acc5_desc: '卡扣式防水帽保护螺丝，延长屋面寿命10+年',
 
     prod1_overline: '旗舰产品', prod1_title: 'ASA高耐候合成树脂瓦',
     prod1_subtitle: '3层共挤核心技术 — 住宅、商业建筑、别墅项目的终极屋面方案',
@@ -91,7 +98,7 @@ const i18n = {
 
   en: {
     logo_tag: 'Roofing Manufacturer',
-    nav_home: 'Home', nav_asa_cat: 'ASA Resin Tile', nav_pvc_cat: 'PVC Sheet', nav_why: 'Why Us',
+    nav_home: 'Home', nav_asa_cat: 'ASA Resin Tile', nav_pvc_cat: 'PVC Sheet', nav_acc_cat: 'Accessories', nav_why: 'Why Us',
     nav_factory: 'Factory', nav_faq: 'FAQ', nav_contact: 'Contact', get_quote: 'Get Quote',
 
     hero_badge: 'Since 2016 · 20 Production Lines · Foshan China',
@@ -107,6 +114,13 @@ const i18n = {
     about_li1: '20 automated co-extrusion lines', about_li2: 'In-house color lab & QC center',
     about_li3: 'In-house color lab & QC center', about_li4: 'OEM/ODM — custom color, size, packaging',
     about_btn: 'Partner With Us ▸', about_badge_year: 'Since',
+
+    acc_overline: 'One-Stop Procurement', acc_title: 'Accessories & Roofing Parts', acc_subtitle: 'Complete your roofing system — ridge tiles, fasteners, edge trims, gutters & more',
+    acc1_name: 'Ridge Tile', acc1_desc: 'Matching ASA ridge caps for seamless roof peak finish',
+    acc2_name: 'Fastener Kit', acc2_desc: 'Corrosion-resistant screws with waterproof EPDM washers',
+    acc3_name: 'Edge Trim', acc3_desc: 'UV-resistant PVC edge closures for clean gable finish',
+    acc4_name: 'Gutter System', acc4_desc: 'PVC rainwater gutters & downpipes — full drainage solution',
+    acc5_name: 'Waterproof Cap', acc5_desc: 'Snap-on caps protect fasteners, extend roof life 10+ years',
 
     prod1_overline: 'Flagship Product', prod1_title: 'ASA Premium Synthetic Resin Roof Tile',
     prod1_subtitle: 'Premium 3-layer co-extrusion — the ultimate roofing solution for residential, commercial & villa projects',

@@ -172,6 +172,15 @@ body{top:0!important}
 .why-card h3{font-size:1.1rem;font-weight:700;color:var(--pri);margin-bottom:10px}
 .why-card p{font-size:.9rem;color:var(--txt-light);line-height:1.7}
 
+/* ---------- Accessories ---------- */
+.acc__grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.acc-card{background:var(--wht);border-radius:var(--rad-lg);overflow:hidden;box-shadow:var(--sh);transition:all var(--tr);text-align:center}
+.acc-card:hover{transform:translateY(-5px);box-shadow:var(--sh-lg)}
+.acc-card img{width:100%;height:200px;object-fit:cover;transition:transform .5s}
+.acc-card:hover img{transform:scale(1.06)}
+.acc-card h4{font-size:1rem;font-weight:700;color:var(--pri);margin:16px 16px 6px;font-family:var(--font-heading)}
+.acc-card p{font-size:.85rem;color:var(--txt-light);margin:0 16px 18px;line-height:1.5}
+
 /* ---------- Comparison Table ---------- */
 .table-wrap{overflow-x:auto;border-radius:var(--rad-lg);box-shadow:var(--sh-lg)}
 .cmp-table{width:100%;border-collapse:collapse;font-size:.95rem}
@@ -288,6 +297,7 @@ body{top:0!important}
 @media(max-width:1024px){
   .why__grid{grid-template-columns:repeat(2,1fr)}
   .cases__grid,.factory__grid{grid-template-columns:repeat(2,1fr)}
+  .acc__grid{grid-template-columns:repeat(3,1fr)}
   .footer__grid{grid-template-columns:1fr 1fr}
   .about-strip__grid,.product-detail,.contact__grid{grid-template-columns:1fr}
   .product-detail--reverse .product-detail__gallery,.product-detail--reverse .product-detail__info{direction:ltr}
@@ -302,7 +312,7 @@ body{top:0!important}
   .header__nav-link{padding:14px 16px;font-size:1.05rem;border-bottom:1px solid var(--bdr)}
   .header__cta-btn{display:none}
   .header__menu-btn{display:flex}
-  .why__grid,.apps__grid,.cases__grid,.factory__grid,.certs__grid{grid-template-columns:1fr}
+  .why__grid,.apps__grid,.cases__grid,.factory__grid,.certs__grid,.acc__grid{grid-template-columns:1fr}
   .faq__grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
   .contact__form{padding:24px}
