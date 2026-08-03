@@ -91,6 +91,7 @@ body{top:0!important}
 .header__inner{display:flex;align-items:center;justify-content:space-between;height:100%}
 .header__logo{display:flex;align-items:center;gap:12px}
 .header__logo-mark{width:42px;height:42px;background:var(--pri);color:var(--wht);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.3rem;border-radius:var(--rad);flex-shrink:0}
+.header__logo-img{width:42px;height:42px;border-radius:var(--rad);object-fit:cover;flex-shrink:0}
 .header__logo-name{font-weight:800;font-size:1.15rem;color:var(--pri);line-height:1.2}
 .header__logo-tag{font-size:.7rem;color:var(--txt-light);text-transform:uppercase;letter-spacing:1px}
 .header__nav-list{display:flex;gap:10px;align-items:center}
