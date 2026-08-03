@@ -96,7 +96,7 @@ const i18n = {
     faq5_q: '出口包装如何保障？', faq5_a: '珍珠棉隔层→免熏蒸木托盘→缠绕膜密封→外层木箱。运输破损率低于0.1%。',
     faq6_q: '可以参观工厂吗？', faq6_a: '当然！我们位于广东佛山，距广州白云机场约1小时车程。联系我们安排接送。',
 
-    cta_title: '准备开始您的项目？', cta_subtitle: '24小时内获取免费样品、技术支持与优惠报价',
+    cta_catalog: '📥 下载产品目录', cta_title: '准备开始您的项目？', cta_subtitle: '24小时内获取免费样品、技术支持与优惠报价',
 
     contact_title: '联系我们', contact_subtitle: '告诉我们您的需求 — 24小时内回复详细报价',
     form_name: '您的姓名 *', form_email: '电子邮箱 *', form_phone: '电话 / WhatsApp',
@@ -209,7 +209,7 @@ const i18n = {
     faq5_q: 'How are tiles packaged?', faq5_a: 'PE foam between tiles → fumigated pallets → stretch wrap → wooden crate. Damage rate below 0.1%.',
     faq6_q: 'Can I visit the factory?', faq6_a: 'Absolutely! We\'re in Foshan, Guangdong — 1 hour from Guangzhou Airport. Contact us for pickup.',
 
-    cta_title: 'Ready to Start Your Project?', cta_subtitle: 'Free samples, technical support & competitive pricing — reply within 24 hours',
+    cta_catalog: '📥 Download Catalog', cta_title: 'Ready to Start Your Project?', cta_subtitle: 'Free samples, technical support & competitive pricing — reply within 24 hours',
 
     contact_title: 'Get In Touch', contact_subtitle: 'Tell us your requirements — detailed quotation within 24 hours',
     form_name: 'Your Name *', form_email: 'Email Address *', form_phone: 'Phone / WhatsApp',
