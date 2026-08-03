@@ -18,6 +18,7 @@ const i18n = {
     hero_subtitle: 'B1防火 · 30年质保 · OEM/ODM · 全球发货 · 中国佛山工厂',
     hero_inquiry: '立即询价', hero_products: '查看产品 ▸',
     trust1: 'ISO 9001 认证', trust2: 'B1 防火等级', trust3: 'CE & SGS 检测', trust4: '出口30+国家',
+    trust_stat1: '📦 月均出货：420万+ ㎡', trust_stat2: '🌍 服务30+个国家地区', trust_stat3: '🤝 全球1000+客户信赖',
     stat1: '条自动化生产线', stat2: '㎡ 年产量', stat3: '成立年份', stat4: '全球客户',
 
     about_heading: 'Dingshengan — 您值得信赖的佛山屋面瓦制造商',
@@ -120,6 +121,7 @@ const i18n = {
     hero_subtitle: 'B1 Fireproof · 30-Year Warranty · OEM & ODM · Global Shipping · Foshan China Factory',
     hero_inquiry: 'Send Inquiry Now', hero_products: 'Explore Products ▸',
     trust1: 'ISO 9001 Certified', trust2: 'B1 Fire Rating', trust3: 'CE & SGS Tested', trust4: 'Export 30+ Countries',
+    trust_stat1: '📦 Monthly output: 4.2M+ ㎡', trust_stat2: '🌍 Serving 30+ countries', trust_stat3: '🤝 1,000+ global clients',
     stat1: 'Automated Lines', stat2: '㎡ Annual Output', stat3: 'Founded Year', stat4: 'Global Clients',
 
     about_heading: 'Dingshengan — Your Trusted Roofing Manufacturer in Foshan',
@@ -315,7 +317,18 @@ document.querySelectorAll('.topbar__lang-btn').forEach(b => {
   b.addEventListener('click', () => { if (b.dataset.lang !== lang) applyLang(b.dataset.lang); });
 });
 
+// ==================== TRUST FLOAT ROTATION ====================
+let trustIdx = 0;
+function rotateTrust() {
+  const items = document.querySelectorAll('.trust-float__item');
+  if (!items.length) return;
+  items.forEach(i => i.classList.remove('active'));
+  items[trustIdx].classList.add('active');
+  trustIdx = (trustIdx + 1) % items.length;
+}
+setInterval(rotateTrust, 3500);
+
 // ==================== INIT ====================
-function init() { applyLang(lang); initAnims(); onScroll(); }
+function init() { applyLang(lang); initAnims(); onScroll(); rotateTrust(); }
 window.addEventListener('scroll', onScroll, { passive: true });
 document.addEventListener('DOMContentLoaded', init);
