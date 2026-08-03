@@ -99,12 +99,14 @@ body{top:0!important}
 .header__nav-link--cta{background:var(--acc);color:var(--wht)!important;font-weight:700;padding:10px 20px}
 .header__nav-link--cta:hover{background:var(--acc-dark)!important;color:var(--wht)!important}
 
-/* All Nav Pill Buttons — orange gradient */
-.header__nav-list{display:flex;gap:10px;align-items:center}
+/* Nav Pill Buttons */
+.header__nav-list{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center}
 .header__nav-link,
-.header__cat-btn{padding:12px 28px;border-radius:50px;font-size:1rem;font-weight:700;color:var(--wht);transition:all .3s ease;font-family:var(--font-heading);letter-spacing:.3px;background:linear-gradient(135deg,var(--acc),var(--acc-dark));box-shadow:0 4px 16px rgba(232,120,26,.35)}
+.header__cat-btn{padding:10px 20px;border-radius:50px;font-size:.88rem;font-weight:700;color:var(--wht);transition:all .3s ease;font-family:var(--font-heading);letter-spacing:.2px;background:linear-gradient(135deg,var(--acc),var(--acc-dark));box-shadow:0 3px 12px rgba(232,120,26,.3);white-space:nowrap}
 .header__nav-link:hover,
-.header__cat-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,120,26,.5);color:var(--wht)}
+.header__cat-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(232,120,26,.45);color:var(--wht)}
+.header__cat-btn--cta{background:linear-gradient(135deg,var(--pri),var(--pri-light));box-shadow:0 3px 12px rgba(13,33,55,.3)}
+.header__cat-btn--cta:hover{box-shadow:0 6px 20px rgba(13,33,55,.45)}
 
 .header__cta-btn{display:none}
 .header__menu-btn{display:none;flex-direction:column;gap:5px;background:none;padding:4px}
@@ -209,7 +211,8 @@ body{top:0!important}
 .why-card p{font-size:.9rem;color:var(--txt-light);line-height:1.7}
 
 /* ---------- Accessories ---------- */
-.acc__grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.acc__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.acc__grid .acc-card:last-child{grid-column:1/-1;max-width:300px;justify-self:center}
 .acc-card{background:var(--wht);border-radius:var(--rad-lg);overflow:hidden;box-shadow:var(--sh);transition:all var(--tr);text-align:center}
 .acc-card:hover{transform:translateY(-5px);box-shadow:var(--sh-lg)}
 .acc-card img{width:100%;height:200px;object-fit:cover;transition:transform .5s}
