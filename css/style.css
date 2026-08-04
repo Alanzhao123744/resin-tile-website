@@ -167,9 +167,9 @@ body>.skiptranslate,.goog-te-banner-frame{display:none!important}body{top:0!impo
 /* FAQ */
 .faq-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:900px;margin:24px auto 0}
 .faq-item{border:1px solid var(--bdr);border-radius:var(--rad);overflow:hidden}
-.faq-q{width:100%;text-align:left;padding:14px 18px;background:var(--w);font-weight:700;color:var(--pri);font-size:.9rem;display:flex;justify-content:space-between;align-items:center}
-.faq-q::after{content:'+';font-size:1.1rem;color:var(--acc)}
-.faq-item.active .faq-q::after{content:'−'}
+.faq-q{width:100%;text-align:left;padding:16px 20px;background:var(--w);font-weight:700;color:var(--pri);font-size:.9rem;display:flex;justify-content:space-between;align-items:center;transition:background var(--tr)}
+.faq-q::after{content:'+';font-size:1.2rem;color:var(--acc);transition:transform var(--tr)}
+.faq-item.active .faq-q::after{content:'−';transform:rotate(180deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .35s}
 .faq-item.active .faq-a{max-height:150px}
 .faq-a p{padding:0 18px 14px;color:var(--txt2);font-size:.85rem}
@@ -228,7 +228,7 @@ svg{vertical-align:middle;flex-shrink:0}
   .steps{grid-template-columns:repeat(2,1fr)}
   .testi-grid{grid-template-columns:1fr}
   .about-row{grid-template-columns:1fr}
-  .con-grid{grid-template-columns:1fr}
+  .con-grid{grid-template-columns:1fr;gap:28px}
 }
 @media(max-width:768px){
   .section{padding:48px 0}
@@ -239,6 +239,7 @@ svg{vertical-align:middle;flex-shrink:0}
   .header__nav-list a{padding:14px 16px;font-size:1rem}
   .header__menu-btn{display:flex}
   .why-grid,.apps-grid-4,.acc-grid,.fac-grid,.steps,.testi-grid,.faq-grid-2{grid-template-columns:1fr}
+  .product-hero__specs-dual{grid-template-columns:1fr}
   .wa-float{bottom:80px;right:16px;padding:8px 14px;font-size:.8rem}
   .back-top{bottom:80px;right:16px}
 }
