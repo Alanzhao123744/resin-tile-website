@@ -52,6 +52,9 @@ input,textarea,select{font-family:inherit;font-size:inherit;outline:none;transit
 .topbar__gt .goog-te-combo option{background:var(--pri)}
 body>.skiptranslate,.goog-te-banner-frame{display:none!important}body{top:0!important}
 
+/* Skip link */
+.skip-link{position:absolute;top:-100px;left:16px;background:var(--acc);color:var(--w);padding:8px 16px;border-radius:0 0 var(--rad) var(--rad);font-weight:700;font-size:.85rem;z-index:9999;transition:top var(--tr)}.skip-link:focus{top:0}
+
 /* Header */
 .header{position:sticky;top:0;z-index:1000;background:var(--w);border-bottom:1px solid var(--bdr);height:60px}
 .header__inner{display:flex;align-items:center;justify-content:space-between;height:100%}
@@ -73,7 +76,7 @@ body>.skiptranslate,.goog-te-banner-frame{display:none!important}body{top:0!impo
 .header__menu-btn.active span:nth-child(3){transform:rotate(-45deg)translate(4px,-4px)}
 
 /* Hero */
-.hero{background:var(--pri);color:var(--w);text-align:center;padding:80px 24px}
+.hero{background:var(--pri);color:var(--w);text-align:center;padding:80px 24px 90px}
 .hero__title{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;line-height:1.2;margin-bottom:14px;letter-spacing:-.01em}
 .hero__subtitle{font-size:1.05rem;opacity:.8;max-width:600px;margin:0 auto 28px}
 .hero .btn{font-size:1rem;padding:14px 36px}
@@ -191,7 +194,7 @@ body>.skiptranslate,.goog-te-banner-frame{display:none!important}body{top:0!impo
 .footer__inner p{opacity:.7;font-size:.85rem;line-height:1.7}
 .footer__inner a{display:block;opacity:.7;font-size:.85rem;margin-bottom:6px;transition:opacity var(--tr)}
 .footer__inner a:hover{opacity:1}
-.footer__copy{border-top:1px solid rgba(255,255,255,.1);padding:16px 0;text-align:center;font-size:.78rem;opacity:.5}
+.footer__copy{border-top:1px solid rgba(255,255,255,.1);padding:16px 0;text-align:center;font-size:.82rem;opacity:.75}
 
 /* Icon styles */
 svg{vertical-align:middle;flex-shrink:0}
@@ -236,6 +239,6 @@ svg{vertical-align:middle;flex-shrink:0}
   .header__nav-list a{padding:14px 16px;font-size:1rem}
   .header__menu-btn{display:flex}
   .why-grid,.apps-grid-4,.acc-grid,.fac-grid,.steps,.testi-grid,.faq-grid-2{grid-template-columns:1fr}
-  .wa-float{bottom:16px;right:16px;padding:8px 14px;font-size:.8rem}
-  .back-top{bottom:16px;right:110px}
+  .wa-float{bottom:80px;right:16px;padding:8px 14px;font-size:.8rem}
+  .back-top{bottom:80px;right:16px}
 }
