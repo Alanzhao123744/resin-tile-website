@@ -128,8 +128,8 @@ body>.skiptranslate,.goog-te-banner-frame{display:none!important}body{top:0!impo
 .cmp-table thead th.h{background:var(--acc)}
 .cmp-table tbody td{background:var(--w)}
 .cmp-table tbody tr:nth-child(even) td{background:var(--bg2)}
-.cmp-table tbody td.h{background:#FFF7EF;font-weight:700;color:var(--acc)}
-.cmp-table tbody tr:nth-child(even) td.h{background:#FFECD0}
+.cmp-table tbody td.h{background:color-mix(in srgb,var(--acc) 8%,transparent);font-weight:700;color:var(--acc)}
+.cmp-table tbody tr:nth-child(even) td.h{background:color-mix(in srgb,var(--acc) 14%,transparent)}
 
 /* Apps */
 .apps-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}
