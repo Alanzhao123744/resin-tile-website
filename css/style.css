@@ -163,9 +163,10 @@ body>.skiptranslate,.goog-te-banner-frame{display:none!important}body{top:0!impo
 .con-form input:focus,.con-form textarea:focus,.con-form select:focus{border-color:var(--acc);background:var(--w)}
 .con-form textarea{resize:vertical;min-height:80px}
 .con-info{display:flex;flex-direction:column;gap:18px}
-.con-info p{font-size:.9rem;line-height:1.6;color:var(--txt2)}
-.con-info strong{display:block;color:var(--pri);margin-bottom:2px}
-.con-info a{color:var(--acc);font-weight:600}
+.con-info p{font-size:.9rem;line-height:1.6;color:var(--pri)}
+.con-info strong{display:block;color:var(--pri);margin-bottom:2px;font-size:.88rem}
+.con-info span{color:var(--txt)}
+.con-info a{color:var(--txt);font-weight:500}
 
 /* Footer */
 .footer{background:var(--pri);color:var(--w);padding:40px 0 0}
