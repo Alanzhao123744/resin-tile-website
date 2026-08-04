@@ -54,8 +54,8 @@ body>.skiptranslate,.goog-te-banner-frame{display:none!important}body{top:0!impo
 .header__nav-list{display:flex;gap:2px;align-items:center}
 .header__nav-list a{padding:8px 14px;border-radius:var(--rad);font-size:.85rem;font-weight:600;color:var(--txt);transition:all var(--tr)}
 .header__nav-list a:hover{background:var(--bg2);color:var(--pri)}
-.header__nav-cta{background:var(--acc)!important;color:var(--w)!important;padding:8px 18px!important}
-.header__nav-cta:hover{filter:brightness(1.1)!important;color:var(--w)!important}
+.header__nav-cta{background:var(--pri)!important;color:var(--w)!important;padding:8px 18px!important}
+.header__nav-cta:hover{filter:brightness(1.3)!important;color:var(--w)!important}
 .header__menu-btn{display:none;flex-direction:column;gap:4px;background:none;padding:4px}
 .header__menu-btn span{width:20px;height:2px;background:var(--pri);border-radius:2px;transition:var(--tr)}
 .header__menu-btn.active span:nth-child(1){transform:rotate(45deg)translate(4px,4px)}
