@@ -12,7 +12,7 @@ img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none;transition:opacity var(--tr)}ul{list-style:none}
 button{cursor:pointer;border:none;font-family:inherit;font-size:inherit;transition:all var(--tr)}
 input,textarea,select{font-family:inherit;font-size:inherit;outline:none;transition:border var(--tr),box-shadow var(--tr)}
-:focus-visible{outline:2px solid var(--acc);outline-offset:2px;border-radius:2px}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:3px}
 
 /* Smooth reveal */
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
@@ -133,7 +133,7 @@ body>.skiptranslate,.goog-te-banner-frame{display:none!important}body{top:0!impo
 .apps-grid-4 div{position:relative;border-radius:var(--rad);overflow:hidden;aspect-ratio:4/3}
 .apps-grid-4 img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .apps-grid-4 div:hover img{transform:scale(1.05)}
-.apps-grid-4 span{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.75));color:var(--w);padding:14px;font-weight:700;font-size:.9rem}
+.apps-grid-4 span{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.75));color:var(--w);padding:16px 14px;font-weight:700;font-size:.9rem;letter-spacing:.2px}
 
 /* Steps */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:24px}
