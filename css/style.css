@@ -112,7 +112,8 @@ body>.skiptranslate,.goog-te-banner-frame{display:none!important}body{top:0!impo
 
 /* Why Grid */
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px}
-.why-grid div{background:var(--w);padding:28px 24px;border-radius:var(--rad);border:1px solid var(--bdr)}
+.why-grid div{background:var(--w);padding:28px 24px;border-radius:var(--rad);border:1px solid var(--bdr);transition:border-color var(--tr),box-shadow var(--tr)}
+.why-grid div:hover{border-color:var(--acc);box-shadow:0 2px 12px rgba(0,0,0,.06)}
 .why-grid h3{font-size:1rem;font-weight:700;color:var(--pri);margin-bottom:8px}
 .why-grid p{font-size:.88rem;color:var(--txt2);line-height:1.6}
 
@@ -150,7 +151,8 @@ body>.skiptranslate,.goog-te-banner-frame{display:none!important}body{top:0!impo
 
 /* Testimonials */
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px}
-.testi{background:var(--w);padding:28px 24px;border-radius:var(--rad);border-left:3px solid var(--acc)}
+.testi{background:var(--w);padding:28px 24px;border-radius:var(--rad);border-left:3px solid var(--acc);transition:transform var(--tr),box-shadow var(--tr)}
+.testi:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.08)}
 .testi p{font-size:.9rem;color:var(--txt);line-height:1.7;margin-bottom:14px;font-style:italic}
 .testi span{font-size:.8rem;color:var(--txt2);font-weight:600}
 
