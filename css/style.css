@@ -1,7 +1,7 @@
 /* Dingshengan — Polished UI/UX */
 :root{
   --pri:#0D2137;--acc:#E8781A;--bg:#FFF;--bg2:#F4F5F7;--bg3:#0D2137;
-  --txt:#1E293B;--txt2:#64748B;--w:#FFF;--bdr:#E2E8F0;
+  --txt:#0D2137;--txt2:#3A5A7C;--w:#FFF;--bdr:#D0D7E0;
   --font:system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   --mw:1140px;--rad:6px;--tr:.2s;--tr-slow:.35s;
 }
@@ -36,6 +36,7 @@ input,textarea,select{font-family:inherit;font-size:inherit;outline:none;transit
 .btn:hover::after{opacity:1}
 .btn--fill{background:var(--acc);color:var(--w);box-shadow:0 2px 12px rgba(232,120,26,.25)}
 .btn--fill:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(232,120,26,.35)}
+.btn--fill:active{transform:scale(.97)}
 .btn--outline{background:transparent;color:var(--pri);border:2px solid var(--pri)}
 .btn--outline:hover{background:var(--pri);color:var(--w)}
 
