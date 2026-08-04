@@ -132,6 +132,12 @@ function initAnims(){document.querySelectorAll('.why-grid>div,.acc-item,.step,.f
 var mb=document.getElementById('menuBtn'),nv=document.getElementById('nav');
 if(mb&&nv){mb.addEventListener('click',function(){mb.classList.toggle('active');nv.classList.toggle('active');document.body.style.overflow=nv.classList.contains('active')?'hidden':''});nv.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mb.classList.remove('active');nv.classList.remove('active');document.body.style.overflow=''})})}
 
+/* Container Calculator */
+(function(){var p=document.getElementById('calcProduct'),c=document.getElementById('calcContainer');if(!p||!c)return;
+var data={asa:{'20ft':[3500,10],'40ft':[7500,22],'40hc':[9000,26]},pvc:{'20ft':[5000,12],'40ft':[10000,24],'40hc':[12000,28]}};
+function calc(){var d=data[p.value][c.value];document.getElementById('calcSqm').textContent='~'+d[0].toLocaleString();document.getElementById('calcPallets').textContent='~'+d[1];}
+p.addEventListener('change',calc);c.addEventListener('change',calc);calc();})();
+
 /* FAQ */
 document.querySelectorAll('.faq-q').forEach(function(b){b.addEventListener('click',function(){var i=b.parentElement,w=i.classList.contains('active'),col=i.closest('.faq-grid-2');if(col)col.querySelectorAll('.faq-item').forEach(function(f){f.classList.remove('active')});if(!w)i.classList.add('active')})});
 
