@@ -31,20 +31,18 @@ about_title:'Dingshengan — 佛山，始于2016',
 about_p1:'位于广东佛山——中国建材行业中心。20条自动化共挤生产线，30,000㎡工厂，年产能超5,000万㎡。',
 about_p2:'产品远销东南亚、中东、非洲、南美市场。提供OEM/ODM定制服务。',
 faq_tag:'常见问题',
-faq1q:'起订量？',faq1a:'标准5000㎡。定制10000㎡。免费寄样。',
+faq1q:'起订量？',faq1a:'5000㎡标准。10000㎡定制。免费寄样。',
 faq2q:'交货期？',faq2a:'定金后15-25天。佛山FCL装箱。',
 faq3q:'OEM/ODM？',faq3a:'支持。定制颜色、尺寸、包装、自有品牌。',
 faq4q:'付款方式？',faq4a:'T/T电汇、WorldFirst万里汇。样品支持PayPal。',
 faq5q:'包装？',faq5a:'珍珠棉隔层 + 免熏蒸托盘 + 缠绕膜 + 木箱。',
 faq6q:'参观工厂？',faq6a:'欢迎！广东佛山，距广州机场1小时车程。联系我们安排。',
 con_tag:'联系',con_title:'联系我们',con_sub:'12小时内回复',
-con_sel:'感兴趣的产品',
-con_btn:'发送询价',
+con_sel:'感兴趣的产品',con_btn:'发送询价',
 footer_p:'ASA树脂瓦 & PVC波浪瓦制造商。中国佛山。始于2016。',
 form_success_title:'询价已发送',form_success_text:'感谢您的咨询，我们将在12小时内回复。',
 privacy_note:'您的信息仅用于回复询价，绝不会被分享。',
 },
-
 en:{
 logo_name:'Dingshengan',
 nav_asa:'ASA Tile',nav_pvc:'PVC Sheet',nav_acc:'Parts',nav_order:'Order',nav_factory:'Factory',nav_contact:'Contact',
@@ -84,80 +82,74 @@ faq4q:'Payment?',faq4a:'T/T, WorldFirst. Sample: PayPal.',
 faq5q:'Packaging?',faq5a:'PE foam + pallets + stretch film + wooden crate.',
 faq6q:'Visit factory?',faq6a:'Yes! Foshan, 1h from Guangzhou airport. Contact us.',
 con_tag:'Contact',con_title:'Get In Touch',con_sub:'Reply within 12 hours',
-con_sel:'Product interested in',
-con_btn:'Send Inquiry',
+con_sel:'Product interested in',con_btn:'Send Inquiry',
 footer_p:'ASA resin tile & PVC roofing sheet manufacturer. Foshan, China. Since 2016.',
 form_success_title:'Inquiry Sent',form_success_text:'Thank you! We will reply within 12 hours.',
 privacy_note:'Your data will only be used to respond to your inquiry.',
 }
 };
 
-let lang=localStorage.getItem('dga_lang')||'zh';
+/* Language */
+let lang='zh';
+try{lang=localStorage.getItem('dga_lang')||'zh'}catch(e){}
 function applyLang(l){
-lang=l;localStorage.setItem('dga_lang',l);document.documentElement.lang=l==='zh'?'zh-CN':'en';
-document.querySelectorAll('.topbar__lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
-document.querySelectorAll('[data-i18n]').forEach(el=>{
-const k=el.dataset.i18n;
-if(i18n[l]?.[k])el.textContent=i18n[l][k];
-});
+lang=l;try{localStorage.setItem('dga_lang',l)}catch(e){}
+document.documentElement.lang=l==='zh'?'zh-CN':'en';
+document.querySelectorAll('.topbar__lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===l)});
+document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.dataset.i18n;if(i18n[l]&&i18n[l][k])el.textContent=i18n[l][k]});
 document.title=l==='zh'?'Dingshengan — ASA树脂瓦 & PVC波浪瓦制造商 | 佛山':'Dingshengan — ASA Resin Tile & PVC Roofing Sheet Manufacturer | Foshan';
-const sel=document.querySelector('select[name="product"]');
-if(sel&&sel.options){
-const o=l==='zh'?[['— 请选择 —',''],['ASA合成树脂瓦','ASA'],['UPVC波浪瓦','PVC'],['两种都需要','Both']]:[['— Please Select —',''],['ASA Resin Tile','ASA'],['PVC Sheet','PVC'],['Both','Both']];
-o.forEach((v,i)=>{if(sel.options[i])sel.options[i].textContent=v[0]});
-}
+var sel=document.querySelector('select[name="product"]');
+if(sel&&sel.options){var o=l==='zh'?[['— 请选择 —',''],['ASA合成树脂瓦','ASA'],['UPVC波浪瓦','PVC'],['两种都需要','Both']]:[['— Please Select —',''],['ASA Resin Tile','ASA'],['PVC Sheet','PVC'],['Both','Both']];o.forEach(function(v,i){if(sel.options[i])sel.options[i].textContent=v[0]})}
 }
 
-/* Scroll + Active Nav Spy */
-let lastY=0;
+/* Scroll spy + throttle */
+var lastY=0,ticking=false;
 function onScroll(){
-const y=window.scrollY;
-document.getElementById('header').classList.toggle('header--hidden',y>80&&y>lastY);
+if(ticking)return;ticking=true;
+requestAnimationFrame(function(){
+var y=window.scrollY;
+var hdr=document.getElementById('header'),bt=document.getElementById('backToTop');
+if(hdr)hdr.classList.toggle('header--hidden',y>80&&y>lastY);
+if(bt)bt.classList.toggle('visible',y>500);
 lastY=y;
-document.getElementById('backToTop').classList.toggle('visible',y>500);
-
-/* Highlight active nav */
-const sections=document.querySelectorAll('section[id]');
-const navLinks=document.querySelectorAll('.header__nav-list a[href^="#"]');
-let current='';
-sections.forEach(s=>{
-const top=s.offsetTop-100;
-if(y>=top)current=s.getAttribute('id');
-});
-navLinks.forEach(a=>{
-a.classList.toggle('nav-active',a.getAttribute('href')==='#'+current);
+var sections=document.querySelectorAll('section[id]');
+var navLinks=document.querySelectorAll('.header__nav-list a[href^="#"]');
+var current='';
+sections.forEach(function(s){var top=s.offsetTop-100;if(y>=top)current=s.getAttribute('id')});
+navLinks.forEach(function(a){a.classList.toggle('nav-active',a.getAttribute('href')==='#'+current)});
+ticking=false;
 });
 }
 
 /* Animations */
-const io=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:.12});
-function initAnims(){document.querySelectorAll('.why-grid>div,.acc-item,.step,.fac-grid>div,.testi,.product-hero,.about-row__img,.about-row__txt').forEach(el=>{el.classList.add('fade-in');io.observe(el)})}
+var io=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');io.unobserve(entry.target)}})},{threshold:.12});
+function initAnims(){document.querySelectorAll('.why-grid>div,.acc-item,.step,.fac-grid>div,.testi,.product-hero,.about-row__img,.about-row__txt').forEach(function(el){el.classList.add('fade-in');io.observe(el)})}
 
 /* Mobile nav */
-const mb=document.getElementById('menuBtn'),nv=document.getElementById('nav');
-mb.addEventListener('click',()=>{mb.classList.toggle('active');nv.classList.toggle('active');document.body.style.overflow=nv.classList.contains('active')?'hidden':''});
-nv.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mb.classList.remove('active');nv.classList.remove('active');document.body.style.overflow=''}));
+var mb=document.getElementById('menuBtn'),nv=document.getElementById('nav');
+if(mb&&nv){mb.addEventListener('click',function(){mb.classList.toggle('active');nv.classList.toggle('active');document.body.style.overflow=nv.classList.contains('active')?'hidden':''});nv.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mb.classList.remove('active');nv.classList.remove('active');document.body.style.overflow=''})})}
 
 /* FAQ */
-document.querySelectorAll('.faq-q').forEach(b=>{b.addEventListener('click',()=>{const i=b.parentElement,w=i.classList.contains('active');i.closest('.faq-grid-2').querySelectorAll('.faq-item').forEach(f=>f.classList.remove('active'));if(!w)i.classList.add('active')})});
+document.querySelectorAll('.faq-q').forEach(function(b){b.addEventListener('click',function(){var i=b.parentElement,w=i.classList.contains('active'),col=i.closest('.faq-grid-2');if(col)col.querySelectorAll('.faq-item').forEach(function(f){f.classList.remove('active')});if(!w)i.classList.add('active')})});
 
 /* Form */
-document.getElementById('contactForm').addEventListener('submit',e=>{
+var form=document.getElementById('contactForm');
+if(form){form.addEventListener('submit',function(e){
 e.preventDefault();
-const fd=new FormData(e.target),d=Object.fromEntries(fd.entries());
+var fd=new FormData(e.target),d=Object.fromEntries(fd.entries());
 if(!d.name||!d.email||!d.message){alert(lang==='zh'?'请填写姓名、邮箱和留言':'Please fill in Name, Email, and Message.');return}
-const btn=e.target.querySelector('button'),orig=btn.textContent;
+var btn=e.target.querySelector('button'),orig=btn.textContent;
 btn.textContent=lang==='zh'?'发送中...':'Sending...';btn.disabled=true;
-setTimeout(()=>{e.target.style.display='none';let s=e.target.nextElementSibling;
-if(!s||!s.classList.contains('form-success')){s=document.createElement('div');s.className='form-success';s.innerHTML='<h3>'+i18n[lang].form_success_title+'</h3><p>'+i18n[lang].form_success_text+'</p>';e.target.parentNode.insertBefore(s,e.target.nextSibling)}
+setTimeout(function(){e.target.style.display='none';var s=e.target.nextElementSibling;
+if(!s||!s.classList.contains('form-success')){s=document.createElement('div');s.className='form-success';var h3=document.createElement('h3');h3.textContent=i18n[lang].form_success_title;var p=document.createElement('p');p.textContent=i18n[lang].form_success_text;s.appendChild(h3);s.appendChild(p);e.target.parentNode.insertBefore(s,e.target.nextSibling)}
 s.classList.add('show');
-setTimeout(()=>{s.classList.remove('show');e.target.style.display='block';btn.textContent=orig;btn.disabled=false},5000)},1200)});
+setTimeout(function(){s.classList.remove('show');e.target.style.display='block';btn.textContent=orig;btn.disabled=false},5000)},1200)});}
 
 /* Back to top */
-document.getElementById('backToTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+var btEl=document.getElementById('backToTop');if(btEl)btEl.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
 
 /* Lang switcher */
-document.querySelectorAll('.topbar__lang-btn').forEach(b=>{b.addEventListener('click',()=>{if(b.dataset.lang!==lang)applyLang(b.dataset.lang)})});
+document.querySelectorAll('.topbar__lang-btn').forEach(function(b){b.addEventListener('click',function(){if(b.dataset.lang!==lang)applyLang(b.dataset.lang)})});
 
 /* Init */
 function init(){applyLang(lang);initAnims();onScroll()}
