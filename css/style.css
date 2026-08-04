@@ -176,8 +176,14 @@ body>.skiptranslate,.goog-te-banner-frame{display:none!important}body{top:0!impo
 .footer__inner a:hover{opacity:1}
 .footer__copy{border-top:1px solid rgba(255,255,255,.1);padding:16px 0;text-align:center;font-size:.78rem;opacity:.5}
 
+/* Icon styles */
+svg{vertical-align:middle;flex-shrink:0}
+.topbar__inner a svg{margin-right:4px;opacity:.7}
+.why-grid div svg{margin-bottom:12px;display:block}
+.con-info p svg{margin-right:6px;float:left;margin-top:2px}
+
 /* Float buttons */
-.wa-float{position:fixed;bottom:28px;right:24px;background:#25B846;color:var(--w);padding:10px 18px;border-radius:50px;font-weight:700;font-size:.85rem;z-index:998;box-shadow:0 4px 16px rgba(37,184,70,.35);transition:transform var(--tr)}
+.wa-float{position:fixed;bottom:28px;right:24px;background:#25B846;color:var(--w);padding:10px 18px;border-radius:50px;font-weight:700;font-size:.85rem;z-index:998;box-shadow:0 4px 16px rgba(37,184,70,.35);transition:transform var(--tr);display:inline-flex;align-items:center;gap:6px}
 .wa-float:hover{transform:translateY(-2px)}
 .back-top{position:fixed;bottom:28px;right:140px;width:40px;height:40px;background:var(--pri);color:var(--w);border-radius:50%;font-weight:700;font-size:1.1rem;z-index:997;opacity:0;visibility:hidden;transform:translateY(8px);transition:all var(--tr);display:flex;align-items:center;justify-content:center}
 .back-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
