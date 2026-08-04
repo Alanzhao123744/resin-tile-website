@@ -1,3 +1,6 @@
+/* ============================================================
+   Dingshengan — Main JS v26 (Formspree live backend)
+   ============================================================ */
 const i18n={
 zh:{
 logo_name:'Dingshengan',
@@ -40,7 +43,7 @@ faq6q:'参观工厂？',faq6a:'欢迎！广东佛山，距广州机场1小时车
 con_tag:'联系',con_title:'联系我们',con_sub:'12小时内回复',
 con_sel:'感兴趣的产品',con_btn:'发送询价',
 footer_p:'ASA树脂瓦 & PVC波浪瓦制造商。中国佛山。始于2016。',
-form_success_title:'询价已发送',form_success_text:'感谢您的咨询，我们将在12小时内回复。',
+form_success_title:'询价已发送',form_success_text:'感谢您的咨询，我们将在12小时内通过邮件回复您。',
 privacy_note:'您的信息仅用于回复询价，绝不会被分享。',
 },
 en:{
@@ -90,7 +93,7 @@ privacy_note:'Your data will only be used to respond to your inquiry.',
 };
 
 /* Language */
-let lang='zh';
+var lang='zh';
 try{lang=localStorage.getItem('dga_lang')||'zh'}catch(e){}
 function applyLang(l){
 lang=l;try{localStorage.setItem('dga_lang',l)}catch(e){}
@@ -132,7 +135,7 @@ if(mb&&nv){mb.addEventListener('click',function(){mb.classList.toggle('active');
 /* FAQ */
 document.querySelectorAll('.faq-q').forEach(function(b){b.addEventListener('click',function(){var i=b.parentElement,w=i.classList.contains('active'),col=i.closest('.faq-grid-2');if(col)col.querySelectorAll('.faq-item').forEach(function(f){f.classList.remove('active')});if(!w)i.classList.add('active')})});
 
-/* Form */
+/* Form — LIVE Formspree backend */
 var form=document.getElementById('contactForm');
 if(form){form.addEventListener('submit',function(e){
 e.preventDefault();
@@ -140,10 +143,16 @@ var fd=new FormData(e.target),d=Object.fromEntries(fd.entries());
 if(!d.name||!d.email||!d.message){alert(lang==='zh'?'请填写姓名、邮箱和留言':'Please fill in Name, Email, and Message.');return}
 var btn=e.target.querySelector('button'),orig=btn.textContent;
 btn.textContent=lang==='zh'?'发送中...':'Sending...';btn.disabled=true;
-setTimeout(function(){e.target.style.display='none';var s=e.target.nextElementSibling;
+fetch('https://formspree.io/f/xeajjazr',{method:'POST',body:fd,headers:{'Accept':'application/json'}}).then(function(r){
+if(!r.ok)throw new Error('fail');
+e.target.style.display='none';var s=e.target.nextElementSibling;
 if(!s||!s.classList.contains('form-success')){s=document.createElement('div');s.className='form-success';var h3=document.createElement('h3');h3.textContent=i18n[lang].form_success_title;var p=document.createElement('p');p.textContent=i18n[lang].form_success_text;s.appendChild(h3);s.appendChild(p);e.target.parentNode.insertBefore(s,e.target.nextSibling)}
 s.classList.add('show');
-setTimeout(function(){s.classList.remove('show');e.target.style.display='block';btn.textContent=orig;btn.disabled=false},5000)},1200)});}
+setTimeout(function(){s.classList.remove('show');e.target.style.display='block';btn.textContent=orig;btn.disabled=false},5000);
+}).catch(function(err){
+btn.textContent=orig;btn.disabled=false;alert(lang==='zh'?'发送失败，请尝试邮件或WhatsApp联系':'Send failed. Please try email or WhatsApp.');
+});
+});}
 
 /* Back to top */
 var btEl=document.getElementById('backToTop');if(btEl)btEl.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
