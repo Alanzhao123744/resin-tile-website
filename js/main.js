@@ -137,7 +137,7 @@ if(mb&&nv){mb.addEventListener('click',function(){mb.classList.toggle('active');
 var limits={asa:{'20ft':28000,'40ft':28000,'40hc':30000},pvc:{'20ft':26000,'40ft':26000,'40hc':28000}};
 var wgt={asa:{2.0:6.0,2.1:6.2,2.2:6.4,2.3:6.6,2.4:6.8,2.5:7.0,2.6:7.2,2.7:7.4,2.8:7.6,2.9:7.8,3.0:8.0},pvc:{1.5:3.5,1.8:4.0,2.0:4.5,2.2:5.0,2.5:5.5,2.8:6.0,3.0:6.5}};
 function setThick(){var o=wgt[p.value],k=Object.keys(o);t.innerHTML=k.map(function(v){return'<option value="'+v+'">'+v+'mm ('+o[v]+' kg/sqm)</option>'}).join('');calc();}
-function calc(){var d=wgt[p.value][t.value],lim=limits[p.value][c.value],sqm=Math.floor(lim*1000/d),pal=Math.round(sqm/340);document.getElementById('calcSqm').textContent='~'+sqm.toLocaleString();document.getElementById('calcDetail').textContent='~'+pal+' pallets · '+d+' kg/sqm · max '+lim.toLocaleString()+' kg load';}
+function calc(){var d=wgt[p.value][t.value],lim=limits[p.value][c.value],sqm=Math.floor(lim*1000/d),pal=Math.round(sqm/340);document.getElementById('calcSqm').textContent='~'+sqm.toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.');document.getElementById('calcDetail').textContent='~'+pal+' pallets · '+d+' kg/sqm · max '+lim.toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.')+' kg load';}
 p.addEventListener('change',setThick);t.addEventListener('change',calc);c.addEventListener('change',calc);setThick();})();
 
 /* FAQ */
