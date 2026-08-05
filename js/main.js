@@ -133,10 +133,12 @@ var mb=document.getElementById('menuBtn'),nv=document.getElementById('nav');
 if(mb&&nv){mb.addEventListener('click',function(){mb.classList.toggle('active');nv.classList.toggle('active');document.body.style.overflow=nv.classList.contains('active')?'hidden':''});nv.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mb.classList.remove('active');nv.classList.remove('active');document.body.style.overflow=''})})}
 
 /* Container Calculator */
-(function(){var p=document.getElementById('calcProduct'),c=document.getElementById('calcContainer');if(!p||!c)return;
-var data={asa:{'20ft':[3500,10],'40ft':[7500,22],'40hc':[9000,26]},pvc:{'20ft':[5000,12],'40ft':[10000,24],'40hc':[12000,28]}};
-function calc(){var d=data[p.value][c.value];document.getElementById('calcSqm').textContent='~'+d[0].toLocaleString();document.getElementById('calcPallets').textContent='~'+d[1];}
-p.addEventListener('change',calc);c.addEventListener('change',calc);calc();})();
+(function(){var p=document.getElementById('calcProduct'),t=document.getElementById('calcThick'),c=document.getElementById('calcContainer');if(!p||!t||!c)return;
+var limits={asa:{'20ft':28000,'40ft':28000,'40hc':30000},pvc:{'20ft':26000,'40ft':26000,'40hc':28000}};
+var wgt={asa:{2.0:6.0,2.1:6.2,2.2:6.4,2.3:6.6,2.4:6.8,2.5:7.0,2.6:7.2,2.7:7.4,2.8:7.6,2.9:7.8,3.0:8.0},pvc:{1.5:3.5,1.8:4.0,2.0:4.5,2.2:5.0,2.5:5.5,2.8:6.0,3.0:6.5}};
+function setThick(){var o=wgt[p.value],k=Object.keys(o);t.innerHTML=k.map(function(v){return'<option value="'+v+'">'+v+'mm ('+o[v]+' kg/sqm)</option>'}).join('');calc();}
+function calc(){var d=wgt[p.value][t.value],lim=limits[p.value][c.value],sqm=Math.floor(lim*1000/d),pal=Math.round(sqm/340);document.getElementById('calcSqm').textContent='~'+sqm.toLocaleString();document.getElementById('calcDetail').textContent='~'+pal+' pallets · '+d+' kg/sqm · max '+lim.toLocaleString()+' kg load';}
+p.addEventListener('change',setThick);t.addEventListener('change',calc);c.addEventListener('change',calc);setThick();})();
 
 /* FAQ */
 document.querySelectorAll('.faq-q').forEach(function(b){b.addEventListener('click',function(){var i=b.parentElement,w=i.classList.contains('active'),col=i.closest('.faq-grid-2');if(col)col.querySelectorAll('.faq-item').forEach(function(f){f.classList.remove('active')});if(!w)i.classList.add('active')})});

@@ -217,10 +217,11 @@
     <h2 class="section__title" data-i18n="calc_title">Container Loading Estimator</h2>
     <div class="calc-box">
       <div class="calc-row">
-        <select id="calcProduct"><option value="asa">ASA Resin Tile (2.5mm)</option><option value="pvc">PVC Sheet (1.5mm)</option></select>
-        <select id="calcContainer"><option value="20ft">20ft GP</option><option value="40ft" selected>40ft GP</option><option value="40hc">40ft HC</option></select>
+        <div class="calc-field"><label>Product</label><select id="calcProduct"><option value="asa">ASA Resin Tile</option><option value="pvc">PVC Corrugated Sheet</option></select></div>
+        <div class="calc-field"><label>Thickness</label><select id="calcThick"></select></div>
+        <div class="calc-field"><label>Container</label><select id="calcContainer"><option value="20ft">20ft GP</option><option value="40ft" selected>40ft GP</option><option value="40hc">40ft HC</option></select></div>
       </div>
-      <div class="calc-result"><strong id="calcSqm">~8,500</strong> sqm / container &nbsp;|&nbsp; <span id="calcPallets">~22</span> pallets</div>
+      <div class="calc-result"><strong id="calcSqm">~8,500</strong> <span>sqm</span><small id="calcDetail">~22 pallets &middot; ~28 tons max load</small></div>
       <a href="contact.html" class="btn btn--fill" data-i18n="calc_cta">Get Exact Freight Quote</a>
     </div>
   </div>
