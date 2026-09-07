@@ -52,7 +52,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Italianno&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style2.css?v=5">
+  <link rel="stylesheet" href="css/style2.css?v=6">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M4 20L16 8l12 12' stroke='%23E85D2C' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 
   <!-- Google Analytics -->
@@ -626,6 +626,54 @@
     </div>
   </section>
 
+  <!-- ==================== CONTAINER CALCULATOR ==================== -->
+  <section class="section section--alt calc" id="calculator" aria-labelledby="calc-title">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__overline" data-i18n="calc_overline">Freight Estimator</span>
+        <h2 class="section__title" id="calc-title" data-i18n="calc_title">How much fits in one container?</h2>
+        <p class="section__subtitle" data-i18n="calc_subtitle">Pick a product, thickness and container size. We estimate loadable square meters and pallets so you can plan your PO.</p>
+      </div>
+      <div class="calc__box">
+        <div class="calc__row">
+          <div class="calc__field">
+            <label for="calcProduct" data-i18n="calc_l_product">Product</label>
+            <select id="calcProduct">
+              <option value="asa" data-i18n="calc_p_asa">ASA Resin Tile</option>
+              <option value="pvc" data-i18n="calc_p_pvc">UPVC Corrugated Sheet</option>
+            </select>
+          </div>
+          <div class="calc__field">
+            <label for="calcThick" data-i18n="calc_l_thick">Thickness</label>
+            <select id="calcThick"></select>
+          </div>
+          <div class="calc__field">
+            <label for="calcContainer" data-i18n="calc_l_container">Container</label>
+            <select id="calcContainer">
+              <option value="20ft">20ft GP</option>
+              <option value="40ft" selected>40ft GP</option>
+              <option value="40hc">40ft HC</option>
+            </select>
+          </div>
+        </div>
+        <div class="calc__result">
+          <div class="calc__result-primary">
+            <strong id="calcSqm">~8,500</strong>
+            <span data-i18n="calc_unit">square meters</span>
+          </div>
+          <small id="calcDetail">~22 pallets · 6.0 kg/sqm · max 28,000 kg load</small>
+        </div>
+        <div class="calc__actions">
+          <a href="#contact" class="calc__cta" data-i18n="calc_cta">
+            <span>Get an exact freight quote</span>
+            <svg aria-hidden="true" class="icon icon--sm"><use href="#i-send"/></svg>
+          </a>
+          <p class="calc__note" data-i18n="calc_note">Estimates only. Final loadable quantity depends on packaging, pallet size, and destination-port restrictions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== HOW TO ORDER ==================== -->
   <section class="section" id="order">
     <div class="container">
@@ -820,7 +868,7 @@
     <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
   </div>
 
-  <script src="js/main.js?v=8"></script>
+  <script src="js/main.js?v=9"></script>
 
   <!-- Lightbox: intercept refs card clicks and show image in modal (index2 only) -->
   <script>

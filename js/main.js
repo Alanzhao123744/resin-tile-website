@@ -36,6 +36,12 @@ const i18n = {
     refs_1_eyebrow: '瓦型目录', refs_1_title: '17 款瓦型', refs_1_meta: '梯形 · 波浪 · 中空 · 罗马大波 · 树脂瓦 — 含实际与有效宽度',
     refs_2_eyebrow: '颜色范围', refs_2_title: '16 款标准色 + RAL 定制', refs_2_meta: '宽度 1050 / 880 mm · 厚度 2.0–3.0 mm · 波距 160 mm',
     refs_3_eyebrow: '中空瓦规格', refs_3_title: 'UPVC 中空隔热瓦', refs_3_meta: '10 年质保 · 20 年使用寿命 · 隔热 10–15°C',
+    calc_overline: '货柜估算', calc_title: '一个货柜能装多少？', calc_subtitle: '选择产品、厚度和货柜尺寸,即可估算可装载平米数与托盘数,便于安排采购。',
+    calc_l_product: '产品', calc_l_thick: '厚度', calc_l_container: '货柜',
+    calc_p_asa: 'ASA 树脂瓦', calc_p_pvc: 'UPVC 波浪瓦',
+    calc_unit: '平方米', calc_detail_fmt: '约 {pal} 托盘 · {kg} kg/m² · 最大承载 {lim} kg',
+    calc_cta: '获取精确运费报价',
+    calc_note: '数据仅供参考。实际可装载量取决于包装方式、托盘尺寸及目的港限制。',
     acc1_name: '脊瓦 / Ridge Tile', acc1_desc: '配套ASA脊瓦，无缝屋脊收口',
     acc2_name: '螺丝套件 / Fastener Kit', acc2_desc: '防腐蚀螺丝 + EPDM防水垫圈',
     acc3_name: '封檐板 / Edge Trim', acc3_desc: '抗UV PVC封边，整洁山墙收口',
@@ -154,6 +160,12 @@ const i18n = {
     refs_1_eyebrow: 'Profile Catalog', refs_1_title: '17 Tile Profiles', refs_1_meta: 'Trapezoidal · Corrugated · Hollow · Roman · Resin — actual & effective widths',
     refs_2_eyebrow: 'Color Range', refs_2_title: '16 Stock Colors + Custom RAL', refs_2_meta: 'Width 1050 / 880 mm · Thickness 2.0–3.0 mm · Wave pitch 160 mm',
     refs_3_eyebrow: 'Hollow Sheet Spec', refs_3_title: 'UPVC Hollow Roof Sheet', refs_3_meta: '10-year warranty · 20-year service · 10–15 °C insulation gain',
+    calc_overline: 'Freight Estimator', calc_title: 'How much fits in one container?', calc_subtitle: 'Pick a product, thickness and container size. We estimate loadable square meters and pallets so you can plan your PO.',
+    calc_l_product: 'Product', calc_l_thick: 'Thickness', calc_l_container: 'Container',
+    calc_p_asa: 'ASA Resin Tile', calc_p_pvc: 'UPVC Corrugated Sheet',
+    calc_unit: 'square meters', calc_detail_fmt: '~{pal} pallets · {kg} kg/m² · max {lim} kg load',
+    calc_cta: 'Get an exact freight quote',
+    calc_note: 'Estimates only. Final loadable quantity depends on packaging, pallet size, and destination-port restrictions.',
     acc1_name: 'Ridge Tile', acc1_desc: 'Matching ASA ridge caps for seamless roof peak finish',
     acc2_name: 'Fastener Kit', acc2_desc: 'Corrosion-resistant screws with waterproof EPDM washers',
     acc3_name: 'Edge Trim', acc3_desc: 'UV-resistant PVC edge closures for clean gable finish',
@@ -271,6 +283,9 @@ function applyLang(l) {
       [l === 'zh' ? '两种都需要' : 'Both Products', 'Both']];
     opts.forEach((o, i) => { if (sel.options[i]) sel.options[i].textContent = o[0]; });
   }
+  // Refresh calculator's language-dependent detail text
+  const cc = document.getElementById('calcContainer');
+  if (cc) cc.dispatchEvent(new Event('change'));
 }
 
 // ==================== HEADER SCROLL ====================
@@ -386,7 +401,51 @@ document.querySelectorAll('.header__lang-btn').forEach(btn => {
 });
 
 // ==================== INIT ====================
-function init() { applyLang(lang); initAnims(); initProductThumbs(); initHeroCard(); onScroll(); }
+// ==================== CONTAINER CALCULATOR ====================
+// Weights (kg/m²) and container payload limits (kg) — origin/main calculator branch
+const calcData = {
+  limits: {
+    asa: { '20ft': 22000, '40ft': 28000, '40hc': 30000 },
+    pvc: { '20ft': 18000, '40ft': 26000, '40hc': 28000 }
+  },
+  weight: {
+    asa: { '2.0': 6.0, '2.1': 6.2, '2.2': 6.4, '2.3': 6.6, '2.4': 6.8, '2.5': 7.0, '2.6': 7.2, '2.7': 7.4, '2.8': 7.6, '2.9': 7.8, '3.0': 8.0 },
+    pvc: { '1.5': 3.5, '1.8': 4.0, '2.0': 4.5, '2.2': 5.0, '2.5': 5.5, '2.8': 6.0, '3.0': 6.5 }
+  },
+  palletsPerContainer: { asa: 340, pvc: 420 }
+};
+function initCalculator() {
+  const p = document.getElementById('calcProduct');
+  const t = document.getElementById('calcThick');
+  const c = document.getElementById('calcContainer');
+  const sqmEl = document.getElementById('calcSqm');
+  const detailEl = document.getElementById('calcDetail');
+  if (!p || !t || !c || !sqmEl || !detailEl) return;
+
+  function fillThickness() {
+    const options = calcData.weight[p.value];
+    t.innerHTML = Object.keys(options).map(k => `<option value="${k}">${k}mm (${options[k]} kg/m²)</option>`).join('');
+    compute();
+  }
+  function compute() {
+    const kgPerSqm = calcData.weight[p.value][t.value];
+    const limit = calcData.limits[p.value][c.value];
+    const sqm = Math.floor(limit / kgPerSqm);
+    const pallets = Math.round(sqm / calcData.palletsPerContainer[p.value]);
+    sqmEl.textContent = '~' + sqm.toLocaleString('en-US');
+    const detail = i18n[lang]?.calc_detail_fmt || '~{pal} pallets · {kg} kg/m² · max {lim} kg load';
+    detailEl.textContent = detail
+      .replace('{pal}', pallets)
+      .replace('{kg}', kgPerSqm)
+      .replace('{lim}', limit.toLocaleString('en-US'));
+  }
+  p.addEventListener('change', fillThickness);
+  t.addEventListener('change', compute);
+  c.addEventListener('change', compute);
+  fillThickness();
+}
+
+function init() { applyLang(lang); initAnims(); initProductThumbs(); initHeroCard(); initCalculator(); onScroll(); }
 window.addEventListener('scroll', onScroll, { passive: true });
 document.addEventListener('DOMContentLoaded', init);
 
