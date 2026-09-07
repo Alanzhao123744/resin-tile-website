@@ -824,10 +824,24 @@ html.lenis, html.lenis body { height: auto; }
   .order-step h3{font-size:1rem}
   .order-step p{font-size:.82rem;line-height:1.6}
 
-  /* Comparison table — allow horizontal scroll, don't overflow parent */
-  .table-wrap{margin:0 -20px}
-  .cmp-table th,.cmp-table td{padding:10px 12px;font-size:.82rem}
-  .cmp-table thead th{font-size:.72rem}
+  /* Comparison table — fit all 5 columns inside viewport, contained borders */
+  .table-wrap{margin:0;overflow:visible;box-shadow:none;border:1px solid #E5DDD1;border-radius:10px}
+  .cmp-table{table-layout:fixed;font-size:.66rem}
+  .cmp-table th,.cmp-table td{padding:8px 3px;font-size:.66rem;line-height:1.35;word-break:break-word;letter-spacing:0}
+  .cmp-table th:first-child,.cmp-table td:first-child{width:19%}
+  .cmp-table th:not(:first-child),.cmp-table td:not(:first-child){width:20.25%}
+  .cmp-table thead th{font-size:.6rem;padding:8px 3px}
+  .cmp-table thead th.is-us{font-size:.65rem}
+  .cmp-table .cmp-check{width:11px;height:11px;margin-left:2px}
+
+  /* Order steps — center icons + text on mobile */
+  .order-step{text-align:center;padding:0 8px}
+  .order-step__icon{margin-left:auto;margin-right:auto}
+  .order-step__num{text-align:center}
+
+  /* Footer — long email must wrap so it stops eating the border */
+  .footer__col p,.footer__col p a{word-break:break-word;overflow-wrap:anywhere}
+  .footer__grid{gap:24px}
 
   /* Applications & Factory grid gaps */
   .apps__grid{gap:12px}
