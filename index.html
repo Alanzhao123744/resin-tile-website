@@ -52,7 +52,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Italianno&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style2.css?v=6">
+  <link rel="stylesheet" href="css/style2.css?v=7">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M4 20L16 8l12 12' stroke='%23E85D2C' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 
   <!-- Google Analytics -->
@@ -164,11 +164,11 @@
       </a>
       <nav class="header__nav" id="nav">
         <ul class="header__nav-list">
-          <li><a href="#asa" class="header__nav-link">ASA resin Tile</a></li>
-          <li><a href="#pvc" class="header__nav-link">PVC Sheet</a></li>
-          <li><a href="#accessories" class="header__nav-link">Accessoires</a></li>
-          <li><a href="#order" class="header__nav-link">How To Order</a></li>
-          <li class="header__nav-link--drawer-only"><a href="#contact" class="header__nav-link">Contact Us</a></li>
+          <li><a href="#asa" class="header__nav-link" data-i18n="nav_asa_cat">ASA resin Tile</a></li>
+          <li><a href="#pvc" class="header__nav-link" data-i18n="nav_pvc_cat">PVC Sheet</a></li>
+          <li><a href="#accessories" class="header__nav-link" data-i18n="nav_acc_cat">Accessoires</a></li>
+          <li><a href="#order" class="header__nav-link" data-i18n="nav_order">How To Order</a></li>
+          <li class="header__nav-link--drawer-only"><a href="#contact" class="header__nav-link" data-i18n="nav_contact">Contact Us</a></li>
         </ul>
         <div class="header__drawer-lang">
           <button type="button" class="header__lang-btn is-active" data-lang="en">EN</button>
@@ -177,7 +177,7 @@
         </div>
       </nav>
       
-      <a href="#contact" class="header__cta">Contact Us</a>
+      <a href="#contact" class="header__cta" data-i18n="get_quote">Contact Us</a>
       <button class="header__menu-btn" id="menuBtn" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -193,15 +193,15 @@
       <div class="hero2__grid" style="display:grid;grid-template-columns:400px 1fr 300px;grid-template-rows:290px 290px;gap:16px;position:relative">
         <div class="hero2__card" style="grid-column:1;grid-row:1 / span 2;background:#111214;border-radius:14px;padding:52px 48px 46px;color:#fff;display:flex;flex-direction:column;justify-content:space-between">
           <div>
-            <div style="font-size:13px;letter-spacing:0.22em;font-weight:500;text-transform:uppercase;color:#f0ebe4;margin-bottom:12px">Premuim Roof Tiles</div>
+            <div data-i18n="hero_overline" style="font-size:13px;letter-spacing:0.22em;font-weight:500;text-transform:uppercase;color:#f0ebe4;margin-bottom:12px">Premuim Roof Tiles</div>
             <div style="width:64px;height:2px;background:#E85D2C;margin-bottom:60px"></div>
-            <h1 style="font-family:'Inria Serif','Times New Roman',serif;font-weight:400;font-size:44px;line-height:1.18;letter-spacing:-0.01em;margin:0 0 22px;color:#fff">
+            <h1 data-i18n="hero_headline" style="font-family:'Inria Serif','Times New Roman',serif;font-weight:400;font-size:44px;line-height:1.18;letter-spacing:-0.01em;margin:0 0 22px;color:#fff">
               <span style="color:#D9A64A">Elevate</span> Every Roof. <span style="color:#D9A64A">Enhance</span> Every Home.
             </h1>
-            <p style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.55;color:#c7c1b8;margin:0">innovation materials. Superior durability.<br>Built to widthstand. Built to inspire</p>
+            <p data-i18n="hero_tagline" style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.55;color:#c7c1b8;margin:0">innovation materials. Superior durability.<br>Built to widthstand. Built to inspire</p>
           </div>
           <a href="#asa" style="align-self:flex-start;display:inline-flex;align-items:center;gap:14px;background:#E85D2C;color:#000;padding:17px 30px;border-radius:4px;font-family:'Inter',sans-serif;font-size:15px;font-weight:500;text-decoration:none;margin-top:34px">
-            explore products
+            <span data-i18n="hero_cta">explore products</span>
             <span aria-hidden="true">→</span>
           </a>
         </div>
@@ -219,7 +219,7 @@
             <span style="font-family:'Inria Serif',serif;font-weight:400;font-size:66px;line-height:1;color:#111">10</span>
             <span style="width:44px;height:2px;background:#E85D2C;margin-top:5px"></span>
           </div>
-          <div style="font-family:'Inria Serif','Times New Roman',serif;font-size:26px;line-height:1.1;color:#111;font-weight:400">year<br>warranty</div>
+          <div data-i18n="hero_badge_warranty" style="font-family:'Inria Serif','Times New Roman',serif;font-size:26px;line-height:1.1;color:#111;font-weight:400">year<br>warranty</div>
         </div>
       </div>
     </div>
@@ -230,19 +230,19 @@
     <div class="container trust-strip__inner">
       <div class="trust-strip__item">
         <strong>2016</strong>
-        <span>Established</span>
+        <span data-i18n="stat3">Established</span>
       </div>
       <div class="trust-strip__item">
         <strong>20</strong>
-        <span>Production Lines</span>
+        <span data-i18n="stat1">Production Lines</span>
       </div>
       <div class="trust-strip__item">
         <strong>50M+ m²</strong>
-        <span>Annual Output</span>
+        <span data-i18n="stat2">Annual Output</span>
       </div>
       <div class="trust-strip__item">
         <strong>30+</strong>
-        <span>Export Countries</span>
+        <span data-i18n="stat4">Export Countries</span>
       </div>
     </div>
   </section>
@@ -306,11 +306,11 @@
           <p class="product-detail__desc" data-i18n="prod1_desc">Premium 3-layer co-extrusion technology: ASA weather-proof surface (UV resistant, never fades), impact-resistant PVC structural core, and reinforced bottom layer. Classic wave profile with 219mm pitch. Timeless architectural form built on modern polymer science.</p>
 
           <div class="product-detail__fit">
-            <span>Best for</span>
-            <strong>Villas</strong>
-            <strong>Resorts</strong>
-            <strong>Temples</strong>
-            <strong>Premium housing</strong>
+            <span data-i18n="best_for">Best for</span>
+            <strong data-i18n="app_villas">Villas</strong>
+            <strong data-i18n="app_resorts">Resorts</strong>
+            <strong data-i18n="app_temples">Temples</strong>
+            <strong data-i18n="app_premium">Premium housing</strong>
           </div>
 
           <div class="product-detail__specs-grid" id="asa-specs">
@@ -338,7 +338,7 @@
           
           <div class="product-detail__actions">
             <a href="#contact" class="btn btn--accent" data-i18n="prod_inquiry">Send inquiry</a>
-            <a href="#specs" class="product-detail__text-link">Compare materials</a>
+            <a href="#specs" class="product-detail__text-link" data-i18n="compare_materials">Compare materials</a>
           </div>
         </div>
       </div>
@@ -376,11 +376,11 @@
           <p class="product-detail__desc" data-i18n="prod2_desc">High-quality UPVC formulation with UV stabilizers. Superior chemical and corrosion resistance, ideal for factories, warehouses, farms, carports, greenhouses, and temporary structures. Much lighter than metal roofing with significantly better thermal and sound insulation.</p>
 
           <div class="product-detail__fit">
-            <span>Best for</span>
-            <strong>Factories</strong>
-            <strong>Warehouses</strong>
-            <strong>Farms</strong>
-            <strong>Carports</strong>
+            <span data-i18n="best_for">Best for</span>
+            <strong data-i18n="app_factories">Factories</strong>
+            <strong data-i18n="app_warehouses">Warehouses</strong>
+            <strong data-i18n="app_farms">Farms</strong>
+            <strong data-i18n="app_carports">Carports</strong>
           </div>
 
           <div class="product-detail__specs-grid" id="pvc-specs">
@@ -408,7 +408,7 @@
           </div>
           <div class="product-detail__actions">
             <a href="#contact" class="btn btn--accent" data-i18n="prod_inquiry2">Send inquiry</a>
-            <a href="#order" class="product-detail__text-link">Order process</a>
+            <a href="#order" class="product-detail__text-link" data-i18n="order_process">Order process</a>
           </div>
         </div>
       </div>
@@ -507,10 +507,10 @@
           <thead>
             <tr>
               <th data-i18n="cmp_item">Item</th>
-              <th class="is-us">ASA Resin Tile</th>
-              <th>Clay Tile</th>
-              <th>Metal Sheet</th>
-              <th>Cement Tile</th>
+              <th class="is-us" data-i18n="cmp_asa">ASA Resin Tile</th>
+              <th data-i18n="cmp_clay">Clay Tile</th>
+              <th data-i18n="cmp_metal">Metal Sheet</th>
+              <th data-i18n="cmp_cement">Cement Tile</th>
             </tr>
           </thead>
           <tbody>
@@ -759,8 +759,8 @@
     <div class="container">
       <div class="section__header">
         
-        <h2 class="section__title">Request Factory Quote</h2>
-        <p class="section__subtitle">Send product, quantity, color, and destination details. Our sales team replies with pricing and lead time within <strong style="color:var(--acc)">12 hours</strong>.</p>
+        <h2 class="section__title" data-i18n="contact_title">Request Factory Quote</h2>
+        <p class="section__subtitle" data-i18n="contact_subtitle">Send product, quantity, color, and destination details. Our sales team replies with pricing and lead time within <strong style="color:var(--acc)">12 hours</strong>.</p>
       </div>
       <div class="contact__grid">
         <form class="contact__form" id="contactForm">
@@ -868,7 +868,7 @@
     <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
   </div>
 
-  <script src="js/main.js?v=9"></script>
+  <script src="js/main.js?v=10"></script>
 
   <!-- Lightbox: intercept refs card clicks and show image in modal (index2 only) -->
   <script>

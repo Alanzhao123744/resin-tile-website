@@ -761,3 +761,91 @@ html.lenis, html.lenis body { height: auto; }
   .calc__result-primary strong{font-size:2.4rem}
   .calc__cta{width:100%;justify-content:center;padding:14px 22px}
 }
+
+
+/* ============================================================
+   MOBILE POLISH — global tightening (v6+)
+   Reduces excessive whitespace, restores back-to-top,
+   keeps contact form inside the viewport, tightens type.
+   ============================================================ */
+@media (max-width:768px){
+  /* Global rhythm — tighter sections, smaller headers */
+  .section{padding:44px 0}
+  .section__header{margin-bottom:28px}
+  .section__title{font-size:clamp(1.5rem,6vw,2rem);line-height:1.15}
+  .section__subtitle{font-size:.9rem;line-height:1.55}
+  .section__overline{font-size:.65rem;margin-bottom:8px}
+  .container{padding:0 20px}
+
+  /* Contact section — was overflowing on mobile */
+  .contact__form{padding:22px 18px !important;border-radius:12px}
+  .contact__form::before{margin:-4px 0 16px;font-size:.7rem}
+  .contact .form-group{margin-bottom:12px}
+  .contact .form-group label{font-size:.72rem;margin-bottom:5px}
+  .contact .form-group input,
+  .contact .form-group textarea,
+  .contact .form-group select{padding:10px 12px;font-size:.9rem;max-width:100%}
+  .contact__grid{gap:24px}
+  .contact-card{padding:16px;gap:12px}
+  .contact-card h4{font-size:.85rem}
+  .contact-card p{font-size:.82rem}
+  /* Prevent any child from breaking the parent width */
+  .contact,.contact *{max-width:100%;box-sizing:border-box}
+
+  /* Restore back-to-top on mobile, drop the language pill (already in drawer) */
+  .float-utils{display:flex !important;right:14px;bottom:14px;gap:8px}
+  .float-utils .float-lang{display:none}
+  .back-to-top{width:40px;height:40px;font-size:1rem;bottom:auto}
+
+  /* Product detail — tighter */
+  .product-detail{gap:20px}
+  .product-detail__desc{font-size:.88rem;margin-bottom:12px}
+  .product-detail__specs-grid{gap:10px 12px;padding:12px 0;margin-bottom:12px}
+  .spec-item__val{font-size:.85rem}
+  .spec-item__label{font-size:.62rem}
+
+  /* Why row: less vertical padding */
+  .why-row{padding:18px 4px;gap:14px 16px}
+  .why-row__body h3{font-size:1rem}
+  .why-row__body p{font-size:.85rem;line-height:1.55}
+
+  /* Refs cards: tighter */
+  .refs__grid{gap:18px}
+  .refs__caption{padding:16px 18px 20px;gap:4px}
+  .refs__caption strong{font-size:1rem}
+  .refs__meta{font-size:.78rem}
+
+  /* Testimonials */
+  .testi-card{padding:22px 20px}
+  .testi-card__text{font-size:.88rem;line-height:1.6}
+
+  /* Order steps */
+  .order__timeline{gap:10px}
+  .order-step h3{font-size:1rem}
+  .order-step p{font-size:.82rem;line-height:1.6}
+
+  /* Comparison table — allow horizontal scroll, don't overflow parent */
+  .table-wrap{margin:0 -20px}
+  .cmp-table th,.cmp-table td{padding:10px 12px;font-size:.82rem}
+  .cmp-table thead th{font-size:.72rem}
+
+  /* Applications & Factory grid gaps */
+  .apps__grid{gap:12px}
+  .factory__grid{gap:12px}
+  .app-card__label{padding:16px 14px 12px;font-size:.9rem}
+
+  /* Calculator on mobile */
+  .calc__result{padding:20px 14px}
+  .calc__note{font-size:.72rem}
+}
+
+@media (max-width:640px){
+  /* Hero inline — user-authored inline styles need higher specificity */
+  #home.hero2 .hero2__card h1{font-size:26px !important;line-height:1.2 !important;margin-bottom:14px !important}
+  #home.hero2 .hero2__card p{font-size:12.5px !important;line-height:1.5 !important}
+  #home.hero2 .hero2__card > div > div:first-child{font-size:11px !important}
+  #home.hero2 .hero2__card a{padding:13px 20px !important;font-size:13px !important;margin-top:20px !important}
+  #home.hero2 .hero2__badge{padding:10px 18px !important}
+  #home.hero2 .hero2__badge span[style*="66px"]{font-size:36px !important}
+  #home.hero2 .hero2__badge > div:last-child{font-size:15px !important}
+}
