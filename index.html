@@ -33,7 +33,7 @@
     "description": "Professional ASA synthetic resin tile and PVC corrugated roofing sheet manufacturer in Foshan, China.",
     "foundingDate": "2016",
     "address": { "@type": "PostalAddress", "addressLocality": "Foshan", "addressRegion": "Guangdong", "addressCountry": "CN" },
-    "contactPoint": { "@type": "ContactPoint", "telephone": "+86-158-8216-0771", "email": "info@dingshengan.com", "contactType": "sales" },
+    "contactPoint": { "@type": "ContactPoint", "telephone": "+85298266341", "email": "info@dingshengan.com", "contactType": "sales", "availableLanguage": ["English", "Chinese"] },
     "sameAs": ["https://wa.me/85298266341"]
   }
   </script>
@@ -53,16 +53,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Italianno&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style2.css?v=8">
+  <link rel="stylesheet" href="css/privacy.css?v=1">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M4 20L16 8l12 12' stroke='%23E85D2C' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB36S9TC68"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RB36S9TC68');
-  </script>
+  <!-- Analytics loads only after the visitor opts in. -->
+  <script defer src="js/privacy.js?v=1"></script>
 </head>
 <body>
 
@@ -213,13 +208,6 @@
         </div>
         <div class="hero2__thumb hero2__thumb--bot" style="grid-column:3;grid-row:2;overflow:hidden;transform:rotate(0.8deg);box-shadow:0 12px 30px rgba(0,0,0,0.08)">
           <img src="images/michael-jasmund-m_vEaZizd2s-unsplash.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block">
-        </div>
-        <div class="hero2__badge" style="position:absolute;left:52%;bottom:-6px;transform:translateX(-50%);background:#fff;padding:22px 40px;display:flex;align-items:center;gap:26px;box-shadow:0 8px 24px rgba(0,0,0,0.12);pointer-events:none">
-          <div style="display:flex;flex-direction:column;align-items:flex-start">
-            <span style="font-family:'Inria Serif',serif;font-weight:400;font-size:66px;line-height:1;color:#111">10</span>
-            <span style="width:44px;height:2px;background:#E85D2C;margin-top:5px"></span>
-          </div>
-          <div data-i18n="hero_badge_warranty" style="font-family:'Inria Serif','Times New Roman',serif;font-size:26px;line-height:1.1;color:#111;font-weight:400">year<br>warranty</div>
         </div>
       </div>
     </div>
@@ -626,54 +614,6 @@
     </div>
   </section>
 
-  <!-- ==================== CONTAINER CALCULATOR ==================== -->
-  <section class="section section--alt calc" id="calculator" aria-labelledby="calc-title">
-    <div class="container">
-      <div class="section__header">
-        <span class="section__overline" data-i18n="calc_overline">Freight Estimator</span>
-        <h2 class="section__title" id="calc-title" data-i18n="calc_title">How much fits in one container?</h2>
-        <p class="section__subtitle" data-i18n="calc_subtitle">Pick a product, thickness and container size. We estimate loadable square meters and pallets so you can plan your PO.</p>
-      </div>
-      <div class="calc__box">
-        <div class="calc__row">
-          <div class="calc__field">
-            <label for="calcProduct" data-i18n="calc_l_product">Product</label>
-            <select id="calcProduct">
-              <option value="asa" data-i18n="calc_p_asa">ASA Resin Tile</option>
-              <option value="pvc" data-i18n="calc_p_pvc">UPVC Corrugated Sheet</option>
-            </select>
-          </div>
-          <div class="calc__field">
-            <label for="calcThick" data-i18n="calc_l_thick">Thickness</label>
-            <select id="calcThick"></select>
-          </div>
-          <div class="calc__field">
-            <label for="calcContainer" data-i18n="calc_l_container">Container</label>
-            <select id="calcContainer">
-              <option value="20ft">20ft GP</option>
-              <option value="40ft" selected>40ft GP</option>
-              <option value="40hc">40ft HC</option>
-            </select>
-          </div>
-        </div>
-        <div class="calc__result">
-          <div class="calc__result-primary">
-            <strong id="calcSqm">~8,500</strong>
-            <span data-i18n="calc_unit">square meters</span>
-          </div>
-          <small id="calcDetail">~22 pallets · 6.0 kg/sqm · max 28,000 kg load</small>
-        </div>
-        <div class="calc__actions">
-          <a href="#contact" class="calc__cta" data-i18n="calc_cta">
-            <span>Get an exact freight quote</span>
-            <svg aria-hidden="true" class="icon icon--sm"><use href="#i-send"/></svg>
-          </a>
-          <p class="calc__note" data-i18n="calc_note">Estimates only. Final loadable quantity depends on packaging, pallet size, and destination-port restrictions.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ==================== HOW TO ORDER ==================== -->
   <section class="section" id="order">
     <div class="container">
@@ -714,56 +654,16 @@
     </div>
   </section>
 
-  <!-- ==================== TESTIMONIALS ==================== -->
-  <section class="section section--alt" id="testimonials">
-    <div class="container">
-      <div class="section__header">
-        
-        <h2 class="section__title" data-i18n="testi_title">What Our Clients Say</h2>
-      </div>
-      <div class="testi__grid">
-        <div class="testi-card">
-          <div class="testi-card__stars">★★★★★</div>
-          <p class="testi-card__text" data-i18n="testi1_text">"We've been importing ASA tiles from Dingshengan for 3 years. Quality is consistent, delivery always on time. Our go-to supplier for roofing projects in the Philippines."</p>
-          <div class="testi-card__author">
-            <div class="testi-card__avatar">R</div>
-            <div><strong>Roberto M.</strong><span>Manila, Philippines</span></div>
-          </div>
-        </div>
-        <div class="testi-card">
-          <div class="testi-card__stars">★★★★★</div>
-          <p class="testi-card__text" data-i18n="testi2_text">"Ordered 3 containers of PVC corrugated sheets for our warehouse project in Kenya. Packing was perfect, zero damage. The team even helped with customs documentation."</p>
-          <div class="testi-card__author">
-            <div class="testi-card__avatar">J</div>
-            <div><strong>James K.</strong><span>Nairobi, Kenya</span></div>
-          </div>
-        </div>
-        <div class="testi-card">
-          <div class="testi-card__stars">★★★★★</div>
-          <p class="testi-card__text" data-i18n="testi3_text">"Custom terracotta color for our Bangkok resort, perfectly matched. 3 years in tropical climate and no fading. Will reorder for our next phase."</p>
-          <div class="testi-card__author">
-            <div class="testi-card__avatar">S</div>
-            <div><strong>Somchai T.</strong><span>Bangkok, Thailand</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
   <!-- ==================== CONTACT ==================== -->
   <section class="contact section" id="contact">
     <div class="container">
       <div class="section__header">
         
         <h2 class="section__title" data-i18n="contact_title">Request Factory Quote</h2>
-        <p class="section__subtitle" data-i18n="contact_subtitle">Send product, quantity, color, and destination details. Our sales team replies with pricing and lead time within <strong style="color:var(--acc)">12 hours</strong>.</p>
+        <p class="section__subtitle" data-i18n="contact_subtitle">Prepare your requirements below, then send the draft from your email app to our sales team.</p>
       </div>
       <div class="contact__grid">
-        <form class="contact__form" id="contactForm">
+        <form class="contact__form" id="contactForm" method="post" aria-describedby="inquiry-notice">
           <div class="form-row">
             <div class="form-group"><label data-i18n="form_name" for="f-name">Your Name *</label><input type="text" name="name" id="f-name" required></div>
             <div class="form-group"><label data-i18n="form_email" for="f-email">Email Address *</label><input type="email" name="email" id="f-email" required></div>
@@ -791,14 +691,27 @@
           </div>
           <div class="form-group">
             <label data-i18n="form_message" for="f-message">Your Message *</label>
-            <textarea name="message" id="f-message" rows="3" required placeholder="Project type, delivery timing, packaging, or special requirements..."></textarea>
+            <textarea name="message" id="f-message" rows="3" maxlength="4000" required placeholder="Project type, delivery timing, packaging, or special requirements..."></textarea>
           </div>
-          <button type="submit" class="btn btn--accent btn--full"><svg aria-hidden="true" class="icon icon--md"><use href="#i-send"/></svg><span>Request Quote</span></button>
+          <p class="inquiry-notice" id="inquiry-notice"><span data-i18n="form_notice">We use the details you choose to send to handle your inquiry and related business communication.</span> <a href="privacy.html" data-i18n="privacy_link">Privacy Policy</a></p>
+          <label class="inquiry-optin"><input type="checkbox" name="email_marketing_opt_in" value="yes"><span data-i18n="form_optin">Optional: email me product updates and distributor offers from Dingshengan. I can unsubscribe by email at any time.</span></label>
+          <p class="inquiry-notice" data-i18n="form_delivery_note">Preparing a draft does not send your inquiry. Please send it from your email app, or contact us on WhatsApp. Marketing subscription is optional.</p>
+          <button type="submit" id="prepareInquiry" disabled class="btn btn--accent btn--full"><svg aria-hidden="true" class="icon icon--md"><use href="#i-send"/></svg><span data-i18n="form_submit">Prepare email inquiry</span></button>
+          <noscript><p>Please send your requirements directly to <a href="mailto:info@dingshengan.com">info@dingshengan.com</a> or <a href="https://wa.me/85298266341">WhatsApp +852 9826 6341</a>.</p></noscript>
+          <section class="inquiry-draft" id="inquiryDraft" hidden aria-labelledby="draftTitle">
+            <h3 id="draftTitle" data-i18n="form_draft_title">Your email draft is ready — not sent yet</h3>
+            <p role="status" data-i18n="form_draft_note">Open your email app, review the draft and click Send there. If it does not open, copy the text below and email info@dingshengan.com.</p>
+            <label for="draftBody" data-i18n="form_draft_label">Inquiry text</label>
+            <textarea id="draftBody" rows="10" readonly></textarea>
+            <button type="button" class="btn btn--accent" id="draftEmail" data-i18n="form_draft_open">Open email app</button>
+            <p id="draftLengthNote" hidden data-i18n="form_draft_long">For this longer inquiry, copy the text above into your email app before sending.</p>
+          </section>
         </form>
         <div class="contact__sidebar">
-          <div class="contact-card"><div class="contact-card__icon"><svg aria-hidden="true" class="icon"><use href="#i-pin"/></svg></div><h4 data-i18n="cinfo_address_label">Factory Address</h4><p data-i18n="cinfo_address">Foshan City, Guangdong Province, China</p></div>
+          <div class="contact-card"><h4 data-i18n="cinfo_team_label">Sales contact</h4><p data-i18n="cinfo_team">Dingshengan Sales Team</p></div>
+          <div class="contact-card"><div class="contact-card__icon"><svg aria-hidden="true" class="icon"><use href="#i-pin"/></svg></div><h4 data-i18n="cinfo_address_label">Factory location</h4><p data-i18n="cinfo_address">Foshan City, Guangdong Province, China</p><p class="inquiry-notice" data-i18n="cinfo_visit">Please contact our sales team for the full visiting address and an appointment before travelling.</p></div>
           <div class="contact-card"><div class="contact-card__icon"><svg aria-hidden="true" class="icon"><use href="#i-phone"/></svg></div><h4 data-i18n="cinfo_phone_label">Phone / WhatsApp</h4><p><a href="tel:+85298266341">+852 9826 6341</a></p></div>
-          <div class="contact-card"><div class="contact-card__icon"><svg aria-hidden="true" class="icon"><use href="#i-mail"/></svg></div><h4 data-i18n="cinfo_email_label">Email</h4><p><a href="mailto:info@dingshengan.com.com">info@dingshengan.com.com</a></p></div>
+          <div class="contact-card"><div class="contact-card__icon"><svg aria-hidden="true" class="icon"><use href="#i-mail"/></svg></div><h4 data-i18n="cinfo_email_label">Email</h4><p><a href="mailto:info@dingshengan.com">info@dingshengan.com</a></p></div>
           <div class="contact-card"><div class="contact-card__icon"><svg aria-hidden="true" class="icon"><use href="#i-clock"/></svg></div><h4 data-i18n="cinfo_hours_label">Working Hours</h4><p data-i18n="cinfo_hours">Mon-Sat: 8:00-18:00 (UTC+8)</p></div>
           <a href="https://wa.me/85298266341" target="_blank" rel="noopener" class="btn btn--whatsapp"><svg aria-hidden="true" class="icon icon--md"><use href="#i-chat"/></svg>Chat on WhatsApp</a>
         </div>
@@ -825,7 +738,7 @@
         <div class="footer__social">
           <a href="https://wa.me/85298266341" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true" class="icon icon--sm"><use href="#i-phone"/></svg></a>
           <a href="mailto:info@dingshengan.com" aria-label="Email"><svg aria-hidden="true" class="icon icon--sm"><use href="#i-mail"/></svg></a>
-          <a href="#" aria-label="Chat"><svg aria-hidden="true" class="icon icon--sm"><use href="#i-chat"/></svg></a>
+          <a href="https://wa.me/85298266341" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg aria-hidden="true" class="icon icon--sm"><use href="#i-chat"/></svg></a>
         </div>
       </div>
       <div class="footer__col">
@@ -848,12 +761,13 @@
       <div class="footer__col">
         <h4 data-i18n="footer_contact_title">Contact</h4>
         <p><svg aria-hidden="true" class="icon icon--sm"><use href="#i-phone"/></svg> <a href="tel:+85298266341">+852 9826 6341</a></p>
-        <p><svg aria-hidden="true" class="icon icon--sm"><use href="#i-mail"/></svg> <a href="mailto:info@dingshengan.com.com">info@dingshengan.com.com</a></p>
+        <p><svg aria-hidden="true" class="icon icon--sm"><use href="#i-mail"/></svg> <a href="mailto:info@dingshengan.com">info@dingshengan.com</a></p>
         <p><svg aria-hidden="true" class="icon icon--sm"><use href="#i-pin"/></svg> Foshan, Guangdong</p>
       </div>
     </div>
     <div class="footer__bottom container">
-      <p>&copy; 2026 Dingshengan. Built in Foshan, China. Since 2016. &nbsp;|&nbsp; <a href="#contact" style="opacity:.7">Contact</a> &nbsp;|&nbsp; <span data-i18n="privacy_note">Your data will only be used to respond to your inquiry. Never shared.</span></p>
+      <p>&copy; 2026 Dingshengan. Built in Foshan, China. Since 2016. &nbsp;|&nbsp; <a href="#contact">Contact</a> &nbsp;|&nbsp; <a href="privacy.html" data-i18n="privacy_link">Privacy Policy</a> &nbsp;|&nbsp; <button type="button" class="privacy-settings-link" data-cookie-settings data-i18n="cookie_settings">Cookie settings</button></p>
+      <p data-i18n="privacy_note">We use inquiry details for your request and related business communication. Read our Privacy Policy for information about service providers and your choices.</p>
     </div>
   </footer>
 
@@ -868,7 +782,7 @@
     <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
   </div>
 
-  <script src="js/main.js?v=10"></script>
+  <script src="js/main.js?v=11"></script>
 
   <!-- Lightbox: intercept refs card clicks and show image in modal (index2 only) -->
   <script>
