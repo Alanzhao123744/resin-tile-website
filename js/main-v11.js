@@ -82,6 +82,14 @@ const i18n = {
     order3_title: '生产制造', order3_desc: '30%定金确认订单。20条自动生产线15-25天完成。每周发送生产进度照片。',
     order4_title: '发货交付', order4_desc: '发货前付清尾款。集装箱从佛山发往您的港口。我们处理所有出口单证。',
 
+    faq_overline: '采购指南', seo_faq_title: '屋面产品与采购常见问题', faq_intro: '为经销商、承包商和工程采购方提供实用解答。',
+    seo_faq1_q: '屋面产品报价需要提供哪些信息？', seo_faq1_a: '请提供产品或瓦型、厚度、颜色、数量、所需板长、目的国家或港口，以及包装要求。销售团队据此确认规格并准备报价。',
+    seo_faq2_q: 'ASA 合成树脂瓦与 UPVC 波浪瓦有什么区别？', seo_faq2_a: 'ASA 合成树脂瓦常用于重视外观的别墅、度假村、寺庙和住宅项目；UPVC 波浪瓦重量较轻，常用于工厂、仓库、农场和车棚。合适的瓦型需结合建筑、气候和工程规格确定。',
+    seo_faq3_q: '屋面板的颜色、厚度和长度可以定制吗？', seo_faq3_a: 'Dingshengan 支持定制颜色、尺寸和包装。可用瓦型、生产公差和订单要求由销售团队按具体项目确认。',
+    seo_faq4_q: '可以申请屋面样品或技术规格资料吗？', seo_faq4_a: '可以。请告知正在评估的产品和瓦型、目的地，以及需要的测试或尺寸。销售团队将确认当前样品供应、寄送费用和相关技术文件。',
+    seo_faq5_q: '是否支持经销商和承包商的出口订单？', seo_faq5_a: '支持。我们服务经销商、批发商、承包商和工程采购方。请联系销售团队讨论包装、贸易条款、目的港要求和订单所需出口单证。',
+    seo_faq6_q: '如何联系 Dingshengan 销售团队？', seo_faq6_a: '发送邮件至 info@dingshengan.com，或通过 WhatsApp +852 9826 6341 联系。请附上产品、数量和目的地，以便我们高效回复。',
+
     scroll_down: 'Scroll to explore',
 
     factory_title: '佛山工厂实拍', factory_subtitle: '广东现代化生产基地,随时欢迎实地参观考察',
@@ -212,6 +220,14 @@ const i18n = {
     order3_title: 'Production', order3_desc: '30% deposit confirms your order. 20 automated lines produce within 15-25 days. Weekly progress photos.',
     order4_title: 'Shipping & Delivery', order4_desc: 'Balance payment before loading. Container shipped from Foshan to your port. All export docs handled.',
 
+    faq_overline: 'Buyer Guide', seo_faq_title: 'Roofing Product & Ordering FAQ', faq_intro: 'Practical answers for distributors, contractors and project buyers.',
+    seo_faq1_q: 'What information is needed for a roofing quotation?', seo_faq1_a: 'Send the product or profile, thickness, color, quantity, required sheet length, destination country or port, and any packaging requirements. Our sales team can then confirm the specification and prepare a quotation.',
+    seo_faq2_q: 'What is the difference between ASA resin tiles and UPVC corrugated sheets?', seo_faq2_a: 'ASA synthetic resin tiles are commonly selected for villas, resorts, temples and residential projects where appearance matters. UPVC corrugated sheets are a lightweight option for factories, warehouses, farms and carports. The suitable profile depends on the building, climate and project specification.',
+    seo_faq3_q: 'Can roof sheet colors, thicknesses and lengths be customized?', seo_faq3_a: 'Dingshengan supports custom colors, sizes and packaging. Available profiles, production tolerances and order requirements are confirmed by our sales team for each project.',
+    seo_faq4_q: 'Can I request roofing samples or technical specifications?', seo_faq4_a: 'Yes. Send the product and profile you are evaluating, your destination and the tests or dimensions you need. Our sales team will confirm current sample availability, delivery cost and relevant technical documents.',
+    seo_faq5_q: 'Do you support export orders for distributors and contractors?', seo_faq5_a: 'Yes. We work with distributors, wholesalers, contractors and project buyers. Contact our sales team to discuss packaging, trade terms, destination-port requirements and export documents for your order.',
+    seo_faq6_q: 'How can I contact Dingshengan sales?', seo_faq6_a: 'Email info@dingshengan.com or contact us on WhatsApp at +852 9826 6341. Include your product, quantity and destination so we can respond efficiently.',
+
     scroll_down: 'Scroll to explore',
 
     factory_title: 'Inside Our Foshan Factory',
@@ -283,8 +299,8 @@ function applyLang(l) {
     }
   });
   document.title = l === 'zh'
-    ? 'Dingshengan | ASA合成树脂瓦 & PVC波浪瓦制造商 | 中国佛山'
-    : 'Dingshengan | ASA Resin Tile & PVC Roofing Sheet Manufacturer | Foshan China';
+    ? 'ASA合成树脂瓦与UPVC波浪瓦厂家 | Dingshengan 佛山'
+    : 'ASA Resin Roof Tiles & UPVC Sheets Manufacturer | Dingshengan';
   // Update select
   const sel = document.querySelector('select[name="product"]');
   if (sel && sel.options) {
