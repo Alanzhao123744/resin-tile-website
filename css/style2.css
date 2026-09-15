@@ -1,4 +1,10 @@
 /* Search-friendly FAQ: native details elements remain readable without JS. */
+.skip-link{position:fixed;left:12px;top:0;transform:translateY(-200%);z-index:10000;background:#fff;color:#111;padding:12px 18px;border:2px solid #E85D2C}
+.skip-link:focus{top:12px;transform:none}
+.header__lang-btn{text-decoration:none}
+.seo-comparison th:first-child{width:30%!important}
+.seo-comparison td{width:70%!important}
+.seo-comparison tbody th{text-align:left;letter-spacing:normal}
 .faq__wrap{max-width:920px}
 .faq__list{display:grid;gap:12px}
 .faq__list details{background:#fff;border:1px solid #E5DDD1;border-radius:12px;padding:0 22px;box-shadow:0 8px 24px rgba(17,18,20,.04)}
@@ -519,6 +525,7 @@ video.hero__bg-back{width:100%;height:100%;object-fit:cover;position:absolute;in
 #pvc .product-detail{gap:40px;align-items:start}
 #pvc .product-detail__main{border-radius:12px;box-shadow:none;margin-bottom:10px}
 #pvc .product-detail__main img{aspect-ratio:5/4;border-radius:12px;min-height:380px;max-height:440px;object-fit:cover}
+#pvc .product-detail__main img[src*="references/"]{object-fit:contain;background:#fff}
 #pvc .product-detail__thumbs{gap:6px}
 #pvc .product-detail__thumbs img{width:64px;height:46px;border-radius:6px;border-width:2px}
 #pvc .product-detail__thumbs img:hover{border-color:#E85D2C}
@@ -879,3 +886,11 @@ html.lenis, html.lenis body { height: auto; }
   #home.hero2 .hero2__badge span[style*="66px"]{font-size:36px !important}
   #home.hero2 .hero2__badge > div:last-child{font-size:15px !important}
 }
+
+/* Keyboard users can bypass the persistent navigation. */
+.skip-link{position:fixed;left:12px;top:0;z-index:10000;transform:translateY(-200%);padding:12px 18px;background:#fff;color:#111214;border:2px solid #e85d2c}
+.skip-link:focus{top:12px;transform:none}
+.header__lang-btn{text-decoration:none}
+.seo-comparison th:first-child{width:30%!important}
+.seo-comparison td{width:70%!important}
+.seo-comparison tbody th{text-align:left;letter-spacing:normal}

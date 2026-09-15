@@ -282,9 +282,10 @@ const i18n = {
 };
 
 // ==================== LANGUAGE ====================
+Object.assign(i18n.en, seoContent.en);
+Object.assign(i18n.zh, seoContent.zh);
 const LK = 'dga_lang';
-let lang = 'en';
-try { lang = localStorage.getItem(LK) === 'zh' ? 'zh' : 'en'; } catch (_) { /* Storage is optional. */ }
+let lang = document.documentElement.lang.startsWith('zh') ? 'zh' : 'en';
 
 function applyLang(l) {
   l = l === 'zh' ? 'zh' : 'en';
@@ -305,7 +306,7 @@ function applyLang(l) {
   const sel = document.querySelector('select[name="product"]');
   if (sel && sel.options) {
     const opts = [[l === 'zh' ? '请选择' : 'Please Select', ''],
-      ['ASA Synthetic Resin Tile', 'ASA'], ['UPVC Corrugated Sheet', 'PVC'],
+      [l === 'zh' ? 'ASA 合成树脂瓦' : 'ASA Synthetic Resin Tile', 'ASA'], [l === 'zh' ? 'UPVC 波浪瓦' : 'UPVC Corrugated Sheet', 'PVC'],
       [l === 'zh' ? '两种都需要' : 'Both Products', 'Both']];
     opts.forEach((o, i) => { if (sel.options[i]) sel.options[i].textContent = o[0]; });
   }
@@ -324,9 +325,10 @@ function onScroll() {
 // ==================== SCROLL ANIMATION ====================
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-}, { threshold: 0.12 });
+}, { threshold: 0 });
 
 function initAnims() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   document.querySelectorAll('.section__title,.section__subtitle,.section__overline,.why-row,.product-detail,.factory__card,.app-card,.contact-card,.about-strip__image,.about-strip__content,.order-step').forEach(el => {
     el.classList.add('fade-in'); io.observe(el);
   });
@@ -423,13 +425,11 @@ document.getElementById('backToTop').addEventListener('click', () => window.scro
 
 // ==================== LANG SWITCH ====================
 document.querySelectorAll('.header__lang-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', e => {
     const next = btn.dataset.lang;
-    if (next === lang) return;
-    applyLang(next);
-    document.querySelectorAll('.header__lang-btn').forEach(b => {
-      b.classList.toggle('is-active', b.dataset.lang === next);
-    });
+    if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
+    window.location.href = (next === 'zh' ? 'zh.html' : './') + window.location.hash;
   });
 });
 
