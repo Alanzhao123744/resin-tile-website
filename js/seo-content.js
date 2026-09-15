@@ -32,7 +32,7 @@ const seoContent = {
     form_quantity: 'Estimated Quantity', form_color: 'Color / RAL Code', form_size: 'Roof Size / Sheet Length', form_port: 'Destination Port',
     applications_heading: 'Roofing Applications & Factory', applications_intro: 'Product options for residential, commercial, industrial and agricultural roofs.',
     applications_label: 'Application Scenarios', factory_label: 'Inside Our Foshan Factory',
-    whatsapp_cta: 'Chat on WhatsApp', skip_main: 'Skip to main content'
+    whatsapp_cta: 'Chat on WhatsApp', skip_main: 'Skip to main content', nav_buying_guide: 'Buyer Guide'
   },
   zh: {
     hero_headline: '<span style="color:#D9A64A">ASA 合成树脂瓦</span>与 UPVC 波浪瓦',
@@ -63,6 +63,6 @@ const seoContent = {
     form_quantity: '预计数量', form_color: '颜色 / RAL 色号', form_size: '屋面尺寸 / 板长', form_port: '目的港',
     applications_heading: '屋面应用与工厂', applications_intro: '适用于住宅、商业、工业及农业屋面的产品选择。',
     applications_label: '应用场景', factory_label: '佛山工厂',
-    whatsapp_cta: '通过 WhatsApp 联系', skip_main: '跳至主要内容'
+    whatsapp_cta: '通过 WhatsApp 联系', skip_main: '跳至主要内容', nav_buying_guide: '采购指南'
   }
 };

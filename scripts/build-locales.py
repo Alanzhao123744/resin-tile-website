@@ -154,6 +154,8 @@ for language,filename in [('en','index.html'),('zh','zh.html')]:
     for el in page.xpath('//*[@data-i18n]'):
         key=el.get('data-i18n')
         if key in words:content(el,words[key])
+    for el in page.xpath('//*[@data-i18n="nav_buying_guide"]'):
+        el.set('href', 'zh-buying-guide.html' if language == 'zh' else 'buying-guide.html')
     if language=='zh':
         for el in page.xpath('//*[@data-text-zh]'):content(el,el.get('data-text-zh'))
         for el in page.xpath('//*[@data-alt-zh]'):el.set('alt',el.get('data-alt-zh'))

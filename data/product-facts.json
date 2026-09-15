@@ -1,0 +1,32 @@
+{
+  "name": "Dingshengan product facts",
+  "url": "https://dingshengan.com/data/product-facts.json",
+  "lastReviewed": "2026-09-15",
+  "publisher": {
+    "name": "Dingshengan",
+    "location": "Foshan, Guangdong, China",
+    "contact": {
+      "email": "info@dingshengan.com",
+      "whatsApp": "+852 9826 6341"
+    }
+  },
+  "products": [
+    {
+      "name": "ASA synthetic resin roof tile",
+      "listedWidth": "1050 mm (effective width 960 mm)",
+      "listedThickness": "2.0–3.0 mm",
+      "listedMaximumLength": "11.8 m",
+      "listedWeight": "6–8 kg/m², depending on specification",
+      "source": "https://dingshengan.com/#asa"
+    },
+    {
+      "name": "UPVC corrugated roofing sheet",
+      "listedWidths": ["830 mm", "930 mm", "1130 mm"],
+      "listedThickness": "1.5–3.0 mm",
+      "listedMaximumLength": "11.8 m",
+      "listedWeight": "3–5 kg/m², depending on specification",
+      "source": "https://dingshengan.com/#pvc"
+    }
+  ],
+  "verification": "Confirm the selected model, dimensions, technical drawings, test documents, pricing, availability and delivery terms with Dingshengan before ordering."
+}

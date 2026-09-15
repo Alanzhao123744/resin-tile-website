@@ -26,4 +26,20 @@ for filename, language, canonical in pages:
     for schema in tree.xpath('//script[@type="application/ld+json"]'):
         json.loads(schema.text)
 
-print('Static SEO checks passed: metadata, images, FAQs and JSON-LD for both pages.')
+guides = [
+    ('buying-guide.html', 'en', 'https://dingshengan.com/buying-guide.html'),
+    ('zh-buying-guide.html', 'zh-CN', 'https://dingshengan.com/zh-buying-guide.html'),
+]
+for filename, language, canonical in guides:
+    tree = html.parse(str(root / filename))
+    assert tree.getroot().get('lang') == language, f'{filename}: html language'
+    assert len(tree.xpath('//h1')) == 1, f'{filename}: exactly one H1 required'
+    assert tree.xpath(f'//link[@rel="canonical" and @href="{canonical}"]'), f'{filename}: canonical'
+    assert len(tree.xpath('//link[@hreflang]')) == 3, f'{filename}: hreflang links'
+    schema = tree.xpath('//script[@type="application/ld+json"]')
+    assert len(schema) == 1 and json.loads(schema[0].text)['@type'] == 'Article', f'{filename}: Article JSON-LD'
+
+facts = json.loads((root / 'data' / 'product-facts.json').read_text(encoding='utf-8'))
+assert len(facts['products']) == 2, 'product facts: product count'
+
+print('Static SEO/GEO checks passed: bilingual pages, guides, product facts and JSON-LD.')
